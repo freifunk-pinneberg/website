@@ -1,0 +1,8 @@
+Sitemap: http://pinneberg.freifunk.net/sitemapindex.xml
+User-agent: *
+Disallow: /mailman/create
+Disallow: /mailman/admin
+Disallow: /mailman/roster
+Disallow: /mailman/options
+Disallow: /kalender.html?tx_cal_controller*
+Disallow: /forum/ucp.php*

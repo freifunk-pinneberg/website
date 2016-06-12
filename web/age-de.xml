@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<age-declaration>
+  <ageblock-basic>
+    <age-issuer>www.fsm.de</age-issuer>
+    <last-change>2016-01-13</last-change>
+    <country>de</country>
+    <label-version>1.0</label-version>
+    <revisit-after>30days</revisit-after>
+    <custom info="fsm-hash_Domain">42df044fa4e03347f1947c986e02c119356e65f7</custom>
+  </ageblock-basic>
+  <ageblock-labeltype>
+    <httpheader>false</httpheader>
+    <htmlmeta>false</htmlmeta>
+    <xmlfile>true</xmlfile>
+    <label-z>false</label-z>
+    <default-age>12</default-age>
+  </ageblock-labeltype>
+  <ageblock-labeltype-definition>
+    <labeltype-xmlfile>
+      <label class="default">
+        <min-age>0</min-age>
+        <default-age>12</default-age>
+      </label>
+      <label class="Domain">
+        <age>12</age>
+        <min-age>0</min-age>
+        <default-age>12</default-age>
+        <scope>*.pinneberg.freifunk.net</scope>
+        <custom info="fsm-hash">42df044fa4e03347f1947c986e02c119356e65f7</custom>
+      </label>
+    </labeltype-xmlfile>
+  </ageblock-labeltype-definition>
+</age-declaration>

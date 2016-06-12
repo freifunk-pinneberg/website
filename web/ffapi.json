@@ -1,0 +1,101 @@
+{
+  "name": "Freifunk Pinneberg",
+  "url": "https://pinneberg.freifunk.net",
+  "location": {
+    "city": "Pinneberg",
+    "country": "DE",
+    "lat": 53.7000,
+    "lon": 9.7300
+  },
+  "contact": {
+    "email": "info@pinneberg.freifunk.net",
+    "irc": "irc://irc.hackint.org:6667#ffpi",
+    "phone": "+49-4101-300313",
+    "facebook": "https://www.facebook.com/FreifunkPinneberg",
+    "twitter": "@FreifunkPI"
+  },
+  "state": {
+    "focus": [
+      "infrastructure/backbone",
+      "Public Free Wifi",
+      "Free internet access"
+    ],
+    "nodes": 215,
+    "lastchange": "2016-03-19T17:28:00+1"
+  },
+  "feeds": [
+    {
+      "name": "Freifunk Pinneberg News",
+      "category": "blog",
+      "type": "rss",
+      "url": "https://pinneberg.freifunk.net/news/?type=200"
+    },
+    {
+      "name": "Freifunk Pinneberg Kalender",
+      "category": "ics",
+      "type": "ics",
+      "url": "https://pinneberg.freifunk.net/kalender.html?type=150"
+    }
+  ],
+  "support": {
+    "donations": {
+      "bankaccount": {
+        "IBAN": "DE20 2305 1030 0015 0792 54",
+        "BIC": "NOLADE21HO",
+        "usage": "Freifunk Pinneberg"
+      }
+    }
+  },
+  "techDetails": {
+    "firmware": {
+      "name": "gluon",
+      "url": "http://download.pinneberg.freifunk.net/"
+    },
+    "routing": [
+      "batman-adv"
+    ],
+    "updatemode": [
+      "autoupdate"
+    ],
+    "legals": [
+      "vpninternational"
+    ],
+    "networks": {
+      "ipv4": [
+        {
+          "network": "10.137.0.0/16"
+        }
+      ],
+      "ipv6": [
+        {
+          "network": "fde8:21c6:9d82::/48"
+        }
+      ]
+    },
+    "dns": [
+      {
+        "nameserver": [
+          "fde8:21c6:9d82::0a01",
+          "fde8:21c6:9d82::0c01",
+          "fde8:21c6:9d82::0d01"
+        ],
+        "domainname": "ffpi."
+      }
+    ]
+  },
+  "nodeMaps": [
+    {
+      "technicalType" : "ffmap",
+      "interval" : "1min",
+      "mapType" : "geographical",
+      "url" : "http://meshviewer.pinneberg.freifunk.net/"
+    },
+    {
+      "technicalType" : "nodelist",
+      "interval": "1min",
+      "mapType" : "list/status",
+      "url" : "http://meshviewer.pinneberg.freifunk.net/data/nodelist.json"
+    }
+  ],
+  "api": "0.4.8"
+}

@@ -1,0 +1,35 @@
+{
+    "name": "freifunk-pinneberg/typo3",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor",
+        "bin-dir": "bin",
+        "web-dir": "web"
+    },
+    "minimum-stability": "beta",
+    "require": {
+        "typo3/cms": "~6.2",
+        "typo3-ter/realurl": "1.*"
+	},
+	"extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "web"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+        ],
+        "post-install-cmd": [
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    }
+}
