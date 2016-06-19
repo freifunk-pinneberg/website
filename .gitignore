@@ -7,6 +7,7 @@
 /web/fileadmin/user_upload/
 /web/fileadmin/videos/
 /web/uploads/
+/web/typo3conf/l10n/
 # Ignore cache
 /typo3conf/temp_CACHED*
 /typo3conf/temp_fieldInfo.php
@@ -27,4 +28,5 @@ web/index.php
 /.pydevproject
 /.settings/
 /_vm/.vagrant/
+
 
