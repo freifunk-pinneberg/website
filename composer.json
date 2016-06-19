@@ -14,7 +14,11 @@
     "minimum-stability": "beta",
     "require": {
         "typo3/cms": "~6.2",
-        "typo3-ter/realurl": "1.*"
+        "typo3-ter/realurl": "1.*",
+        "typo3-ter/cal": "1.10.*",
+        "typo3-ter/tq-seo": "6.0.*",
+        "typo3-ter/extension-builder": "*",
+        "typo3-ter/static-info-tables": "*"
 	},
 	"extra": {
         "typo3/cms": {
