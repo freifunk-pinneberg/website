@@ -1,5 +1,7 @@
 {
     "name": "freifunk-pinneberg/typo3",
+    "description": "Freifunk Pinneberg Website",
+    "license": "CC-BY-NC-4.0",
     "repositories": [
         {
             "type": "composer",
@@ -7,11 +9,11 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter"
+            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter"
+            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/"
         }
     ],
     "config": {
@@ -27,8 +29,8 @@
         "typo3-ter/tq-seo": "6.0.*",
         "typo3-ter/extension-builder": "*",
         "typo3-ter/static-info-tables": "*",
-        "typo3-tx-ffpi-nodecounter": "dev-master",
-        "typo3-tx-ffpi-theme": "dev-master"
+        "ffpi/nodecounter": "dev-master",
+        "ffpi/ffpi-theme": "dev-master"
 	},
 	"extra": {
         "typo3/cms": {

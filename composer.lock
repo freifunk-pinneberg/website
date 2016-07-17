@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "694e257b202268b6b5fa861c89df5ded",
+    "hash": "b1f7f9a2f716c5d747f966f68dd4b7da",
+    "content-hash": "f25bab73c972c6f4599ffd9d110e7ece",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -61,6 +62,103 @@
             "time": "2015-06-14 21:17:01"
         },
         {
+            "name": "ffpi/ffpi-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme.git",
+                "reference": "1e4e5477e4501a6379185534e5dbf3913185cd18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/1e4e5477e4501a6379185534e5dbf3913185cd18",
+                "reference": "1e4e5477e4501a6379185534e5dbf3913185cd18",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "6.2.0 - 7.6.99"
+            },
+            "replace": {
+                "ffpi-theme": "self.version",
+                "ffpi/ffpi-theme": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": []
+            },
+            "autoload-dev": {
+                "psr-4": []
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Quiatkowski",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Theme for Freifunk Pinneberg",
+            "homepage": "https://pinneberg.freifunk.net",
+            "keywords": [
+                "Freifunk",
+                "Pinneberg",
+                "Theme"
+            ],
+            "support": {
+                "forum": "https://pinneberg.freifunk.net/forum/",
+                "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme",
+                "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
+            },
+            "time": "2016-07-17 09:39:31"
+        },
+        {
+            "name": "ffpi/nodecounter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
+                "reference": "4e7d838463e86041cc33bd7e6d3d0dd9ba1d33bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/zipball/4e7d838463e86041cc33bd7e6d3d0dd9ba1d33bf",
+                "reference": "4e7d838463e86041cc33bd7e6d3d0dd9ba1d33bf",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": ">=6.2.0,<7.6"
+            },
+            "replace": {
+                "ffpi_nodecounter": "self.version",
+                "typo3-ter/ffpi-nodecounter": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Quiatkowski",
+                    "role": "Developer",
+                    "homepage": "https://pinneberg.freifunk.net"
+                }
+            ],
+            "description": "Freifunk Nodecounter",
+            "homepage": "https://pinneberg.freifunk.net",
+            "keywords": [
+                "TYPO3",
+                "extension",
+                "freifunk",
+                "nodes"
+            ],
+            "support": {
+                "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/tree/master",
+                "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/issues"
+            },
+            "time": "2016-07-16 20:10:38"
+        },
+        {
             "name": "helhum/class-alias-loader",
             "version": "1.1.5",
             "source": {
@@ -107,6 +205,7 @@
                 "classloader",
                 "composer"
             ],
+            "abandoned": "typo3/class-alias-loader",
             "time": "2015-06-11 14:08:07"
         },
         {
@@ -234,10 +333,10 @@
         },
         {
             "name": "typo3-ter/static-info-tables",
-            "version": "6.3.9",
+            "version": "6.3.10",
             "dist": {
                 "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.3.9/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.3.10/t3x/",
                 "reference": null,
                 "shasum": null
             },
@@ -256,15 +355,9 @@
             },
             "type": "typo3-cms-extension",
             "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Migrations",
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
+                "psr-4": {
+                    "SJBR\\StaticInfoTables\\": "Classes/"
+                }
             },
             "authors": [
                 {
@@ -275,7 +368,7 @@
                 }
             ],
             "description": "Data and API for countries, languages and currencies.",
-            "time": "2016-02-19 23:35:04"
+            "time": "2016-07-15 00:27:57"
         },
         {
             "name": "typo3-ter/tq-seo",
@@ -546,7 +639,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": [],
+    "stability-flags": {
+        "ffpi/nodecounter": 20,
+        "ffpi/ffpi-theme": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
