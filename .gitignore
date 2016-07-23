@@ -8,11 +8,13 @@
 /web/fileadmin/videos/
 /web/uploads/
 /web/typo3conf/l10n/
+
 # Ignore cache
 /typo3conf/temp_CACHED*
 /typo3conf/temp_fieldInfo.php
 /typo3conf/deprecation_*.log
 /typo3conf/AdditionalConfiguration.php
+
 # Ignore system folders, you should have them symlinked.
 # If not comment out the following entries.
 web/typo3
@@ -23,10 +25,10 @@ web/index.php
 # Ignore temp directory.
 /typo3temp/
 
+# IDE
 /vendor
-/.project
-/.pydevproject
+.project
+.pydevproject
 /.settings/
 /_vm/.vagrant/
-
-
+.idea/
