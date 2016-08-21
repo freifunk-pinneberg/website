@@ -12,11 +12,13 @@
 #ignore extensions
 /web/typo3conf/ext/
 
+
 # Ignore cache
 /typo3conf/temp_CACHED*
 /typo3conf/temp_fieldInfo.php
 /typo3conf/deprecation_*.log
 /typo3conf/AdditionalConfiguration.php
+
 # Ignore system folders
 web/typo3
 web/typo3_src
@@ -36,3 +38,4 @@ bin
 .pydevproject
 .settings/
 .idea
+
