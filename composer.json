@@ -1,51 +1,63 @@
 {
-    "name": "freifunk-pinneberg/typo3",
-    "description": "Freifunk Pinneberg Website",
-    "license": "CC-BY-NC-4.0",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/"
-        }
-    ],
-    "config": {
-        "vendor-dir": "vendor",
-        "bin-dir": "bin",
-        "web-dir": "web"
+  "name": "freifunk-pinneberg/website",
+  "description": "Freifunk Pinneberg Website",
+  "license": "CC-BY-NC-4.0",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
     },
-    "minimum-stability": "beta",
-    "require": {
-        "typo3/cms": "~6.2",
-        "typo3-ter/realurl": "1.*",
-        "typo3-ter/cal": "1.10.*",
-        "typo3-ter/tq-seo": "6.0.*",
-        "typo3-ter/extension-builder": "*",
-        "typo3-ter/static-info-tables": "*",
-        "ffpi/nodecounter": "dev-master",
-        "ffpi/ffpi-theme": "dev-master"
-	},
-	"extra": {
-        "typo3/cms": {
-            "cms-package-dir": "{$vendor-dir}/typo3/cms",
-            "web-dir": "web"
-        }
+    {
+      "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/"
     },
-    "scripts": {
-        "post-update-cmd": [
-        ],
-        "post-install-cmd": [
-        ]
+    {
+      "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/"
     },
-    "autoload": {
-        "psr-4": {
-        }
+    {
+      "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/website-vm/"
     }
+  ],
+  "config": {
+    "vendor-dir": "vendor",
+    "bin-dir": "bin",
+    "web-dir": "web"
+  },
+  "minimum-stability": "beta",
+  "require": {
+    "typo3/cms": "~7.6",
+    "typo3-ter/realurl": "1.*",
+    "typo3-ter/cal": "1.*",
+    "typo3-ter/extension-builder": "7.6.*",
+    "typo3-ter/static-info-tables": "*",
+    "ffpi/ffpi-theme": "dev-master",
+    "ffpi/nodecounter": "2.*"
+  },
+  "require-dev": {
+    "phing/phing": "2.9.*",
+    "freifunk-pinneberg/website-vm": "dev-master"
+  },
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "web"
+    },
+    "installer-paths": {
+      "_vm": ["freifunk-pinenberg/website-vm"]
+    }
+  },
+  "scripts": {
+    "post-update-cmd": [
+    ],
+    "post-install-cmd": [
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "FFPI\\FfpiNodecounter\\": "web/typo3conf/ext/ffpi_nodecounter/Classes",
+      "FFPI\\FfpiRouter\\": "web/typo3conf/ext/ffpi_router/Classes"
+    }
+  }
 }
