@@ -33,7 +33,8 @@
     "typo3-ter/extension-builder": "7.6.*",
     "typo3-ter/static-info-tables": "*",
     "ffpi/ffpi-theme": "dev-master",
-    "ffpi/nodecounter": "2.*"
+    "ffpi/nodecounter": "2.*",
+    "typo3-ter/sf-yubikey": "^1.1"
   },
   "require-dev": {
     "phing/phing": "2.9.*",
