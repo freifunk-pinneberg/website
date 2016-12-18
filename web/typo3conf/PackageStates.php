@@ -408,6 +408,12 @@ return [
             'packagePath' => 'typo3conf/ext/ffpi_router/',
             'suggestions' => [],
         ],
+        'sf_yubikey' => [
+            'composerName' => 'derhansen/sf_yubikey',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/sf_yubikey/',
+            'suggestions' => [],
+        ],
         'static_info_tables' => [
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/static_info_tables/',
@@ -415,13 +421,6 @@ return [
             'suggestions' => [],
             'manifestPath' => '',
             'composerName' => 'sjbr/static-info-tables',
-        ],
-        'tq_seo' => [
-            'state' => 'inactive',
-            'packagePath' => 'typo3conf/ext/tq_seo/',
-            'classesPath' => 'Classes/',
-            'suggestions' => [],
-            'composerName' => 'tq_seo',
         ],
         'adodb' => [
             'manifestPath' => '',

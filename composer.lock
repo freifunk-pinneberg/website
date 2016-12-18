@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0467f8baff2923d3145fa50b0dfe583e",
-    "content-hash": "5aa7113c9b902c620752ac2d670663b1",
+    "hash": "c8f49660c85af2a757d547bd819ebc14",
+    "content-hash": "2b130779f0a0f50be6b77aee220c3e94",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -122,7 +122,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/6341879dc672e179a26bf152f585822b2ec5c8e2",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/dca790e18ee10114467709f2af18a8591317b9e8",
                 "reference": "6341879dc672e179a26bf152f585822b2ec5c8e2",
                 "shasum": ""
             },
@@ -963,6 +963,45 @@
             ],
             "description": "WARNING! This version is obsolete and unsupported! It was not tested by the author and its work is not guaranteed! If you find bugs in this versionm, they will not be fixed! Use at your own risk. Last stable version of RealURL 1.x is 1.13.6. Users of TYPO3 7.6 are strongly recommended to wait for upcoming RealURL version 2.",
             "time": "2016-11-25 08:52:15"
+        },
+        {
+            "name": "typo3-ter/sf-yubikey",
+            "version": "1.1.3",
+            "dist": {
+                "type": "t3x",
+                "url": "https://typo3.org/extensions/repository/download/sf_yubikey/1.1.3/t3x/",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "typo3/cms-core": ">= 6.2.0, <= 7.99.99"
+            },
+            "replace": {
+                "sf_yubikey": "self.version",
+                "typo3-ter/sf_yubikey": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "classmap": [
+                    ""
+                ],
+                "exclude-from-classmap": [
+                    "Migrations",
+                    "Tests",
+                    "tests",
+                    "class.ext_update.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Torben Hansen",
+                    "email": "derhansen@gmail.com",
+                    "company": "",
+                    "username": "derhansen"
+                }
+            ],
+            "description": "An authentication service for TYPO3 which extends the backend/frontend login by YubiKey OTP two-factor authentication.",
+            "time": "2016-02-16 19:33:20"
         },
         {
             "name": "typo3-ter/static-info-tables",
