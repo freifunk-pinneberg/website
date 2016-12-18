@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "6341879dc672e179a26bf152f585822b2ec5c8e2"
+                "reference": "dca790e18ee10114467709f2af18a8591317b9e8"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/dca790e18ee10114467709f2af18a8591317b9e8",
-                "reference": "6341879dc672e179a26bf152f585822b2ec5c8e2",
+                "reference": "dca790e18ee10114467709f2af18a8591317b9e8",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +161,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
             },
-            "time": "2016-08-15 18:43:24"
+            "time": "2016-12-17 17:04:53"
         },
         {
             "name": "ffpi/nodecounter",
