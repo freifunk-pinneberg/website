@@ -381,13 +381,6 @@ return [
             ],
             'composerName' => 'cal',
         ],
-        'dr2okevin_sql_cron' => [
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/dr2okevin_sql_cron/',
-            'classesPath' => 'Classes/',
-            'suggestions' => [],
-            'composerName' => 'dr2okevin_sql_cron',
-        ],
         'extension_builder' => [
             'manifestPath' => '',
             'composerName' => 'ebt/extension_builder',
@@ -400,12 +393,6 @@ return [
             'composerName' => 'ffpi/nodecounter',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/ffpi_nodecounter/',
-            'suggestions' => [],
-        ],
-        'ffpi_router' => [
-            'composerName' => 'ffpi/router',
-            'state' => 'active',
-            'packagePath' => 'typo3conf/ext/ffpi_router/',
             'suggestions' => [],
         ],
         'sf_yubikey' => [
