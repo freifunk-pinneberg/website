@@ -41,6 +41,7 @@
     "ebt/extension-builder": "dev-master",
     "typo3-ter/static-info-tables": "*",
     "ffpi/ffpi-theme": "dev-master",
+    "ffpi/node-updates": "dev-master",
     "ffpi/nodecounter": "2.*",
     "typo3-ter/sf-yubikey": "^1.1"
   },
