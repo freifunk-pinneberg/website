@@ -17,7 +17,15 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/freifunk-pinneberg/website-vm/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/TYPO3-extensions/extension_builder.git"
     }
   ],
   "config": {
@@ -30,7 +38,7 @@
     "typo3/cms": "~7.6",
     "typo3-ter/realurl": "~1.13.6",
     "typo3-ter/cal": "1.*",
-    "typo3-ter/extension-builder": "7.6.*",
+    "ebt/extension-builder": "dev-master",
     "typo3-ter/static-info-tables": "*",
     "ffpi/ffpi-theme": "dev-master",
     "ffpi/nodecounter": "2.*",
