@@ -702,23 +702,24 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.4",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756"
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/545ce9136690cea74f98f86fbb9c92dd9ab1a756",
-                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1"
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
@@ -751,25 +752,25 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-11-24 01:01:23"
+            "time": "2017-04-20 17:32:18"
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.15",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f"
+                "reference": "86407ff20855a5eaa2a7219bd815e9c40a88633e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d5643cd095e5e37d31e004bb2606b5dd7e96602f",
-                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/86407ff20855a5eaa2a7219bd815e9c40a88633e",
+                "reference": "86407ff20855a5eaa2a7219bd815e9c40a88633e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9",
-                "symfony/debug": "~2.7,>=2.7.2|~3.0.0",
+                "symfony/debug": "^2.7.2|~3.0.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "require-dev": {
@@ -812,7 +813,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-06 11:59:35"
+            "time": "2017-04-03 20:37:06"
         },
         {
             "name": "symfony/debug",
@@ -873,16 +874,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.15",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775"
+                "reference": "7131327eb95d86d72039fd1216226c28f36fd02a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/c0f10576335743b881ac1ed39d18c0fa66048775",
-                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/7131327eb95d86d72039fd1216226c28f36fd02a",
+                "reference": "7131327eb95d86d72039fd1216226c28f36fd02a",
                 "shasum": ""
             },
             "require": {
@@ -918,7 +919,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-13 09:38:12"
+            "time": "2017-03-20 08:46:40"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -981,18 +982,22 @@
         },
         {
             "name": "typo3-ter/cal",
-            "version": "1.10.3",
+            "version": "1.11.1",
             "dist": {
                 "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/cal/1.10.3/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/cal/1.11.1/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "typo3/cms-core": ">= 6.1.0, <= 7.9.99"
+                "typo3/cms-core": ">= 6.1.0, <= 8.9.99"
             },
             "replace": {
                 "cal": "self.version"
+            },
+            "suggest": {
+                "typo3-ter/tt-address": "*",
+                "typo3-ter/wec-map": "*"
             },
             "type": "typo3-cms-extension",
             "autoload": {
@@ -1015,7 +1020,7 @@
                 }
             ],
             "description": "A calendar combining all the functions of the existing calendar extensions plus adding some new features. It is based on the ical standard",
-            "time": "2016-02-10 21:37:50"
+            "time": "2017-04-16 21:40:48"
         },
         {
             "name": "typo3-ter/realurl",
@@ -1101,16 +1106,15 @@
         },
         {
             "name": "typo3-ter/static-info-tables",
-            "version": "6.3.10",
+            "version": "6.4.3",
             "dist": {
                 "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.3.10/t3x/",
+                "url": "https://typo3.org/extensions/repository/download/static_info_tables/6.4.3/t3x/",
                 "reference": null,
                 "shasum": null
             },
             "require": {
-                "php": ">= 5.3.7",
-                "typo3/cms-core": ">= 6.2.0, <= 7.6.99"
+                "typo3/cms-core": ">= 7.6.0, <= 8.7.99"
             },
             "conflict": {
                 "typo3-ter/cc-infotablesmgm": "<= 99.99.99",
@@ -1136,7 +1140,7 @@
                 }
             ],
             "description": "Data and API for countries, languages and currencies.",
-            "time": "2016-07-15 00:27:57"
+            "time": "2017-04-11 21:03:28"
         },
         {
             "name": "typo3/class-alias-loader",
@@ -1198,16 +1202,16 @@
         },
         {
             "name": "typo3/cms",
-            "version": "7.6.14",
+            "version": "7.6.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TYPO3/TYPO3.CMS.git",
-                "reference": "9de61953bd98bebfbf7cc985896009db4245c24b"
+                "reference": "9219e4fa9af5e4bd2ea1f208056cb396667cce45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/9de61953bd98bebfbf7cc985896009db4245c24b",
-                "reference": "9de61953bd98bebfbf7cc985896009db4245c24b",
+                "url": "https://api.github.com/repos/TYPO3/TYPO3.CMS/zipball/9219e4fa9af5e4bd2ea1f208056cb396667cce45",
+                "reference": "9219e4fa9af5e4bd2ea1f208056cb396667cce45",
                 "shasum": ""
             },
             "require": {
@@ -1222,7 +1226,7 @@
                 "php": ">=5.5.0",
                 "psr/http-message": "~1.0",
                 "psr/log": "~1.0.0",
-                "swiftmailer/swiftmailer": "~5.4.1",
+                "swiftmailer/swiftmailer": "~5.4.5",
                 "symfony/console": "^2.7",
                 "symfony/finder": "^2.7",
                 "typo3/class-alias-loader": "^1.0",
@@ -1285,6 +1289,7 @@
                 "typo3/cms-workspaces": "self.version"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
                 "mikey179/vfsstream": "1.6.0",
                 "phpunit/phpunit": "~4.8.0",
                 "symfony/polyfill-mbstring": "~1.0"
@@ -1392,7 +1397,7 @@
                 "extbase",
                 "typo3"
             ],
-            "time": "2016-11-29 09:44:43"
+            "time": "2017-04-18 17:27:37"
         },
         {
             "name": "typo3/cms-composer-installers",
