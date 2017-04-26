@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c8f49660c85af2a757d547bd819ebc14",
-    "content-hash": "2b130779f0a0f50be6b77aee220c3e94",
+    "hash": "b624265451d762b860b8b3efbc56b6ac",
+    "content-hash": "9d85fe1273864a91438e55661445e7e4",
     "packages": [
         {
             "name": "cogpowered/finediff",
@@ -113,6 +113,67 @@
             "time": "2015-06-14 21:17:01"
         },
         {
+            "name": "ebt/extension-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-extensions/extension_builder.git",
+                "reference": "612a79111706c13ff417c5c5b2aa8dbebdfc22e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-extensions/extension_builder/zipball/612a79111706c13ff417c5c5b2aa8dbebdfc22e4",
+                "reference": "612a79111706c13ff417c5c5b2aa8dbebdfc22e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "5.5.0 - 7.0.99",
+                "typo3/cms-core": "~7.6"
+            },
+            "replace": {
+                "extension_builder": "self.version",
+                "typo3-ter/extension-builder": "self.version"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.6.0",
+                "phpunit/phpunit": "~4.8.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EBT\\ExtensionBuilder\\": "Classes/",
+                    "PhpParser\\": "Resources/Private/PHP/PHP-Parser/lib/PhpParser/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "EBT\\ExtensionBuilder\\Tests\\": "Tests/",
+                    "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "mkdir -p .Build/Web/typo3conf/ext/",
+                    "[ -L .Build/Web/typo3conf/ext/extension_builder ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/extension_builder"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Tool to kickstart and maintain TYPO3 extensions",
+            "homepage": "http://typo3.org",
+            "support": {
+                "source": "https://github.com/TYPO3-extensions/extension_builder/tree/master"
+            },
+            "time": "2016-11-21 20:29:23"
+        },
+        {
             "name": "ffpi/ffpi-theme",
             "version": "dev-master",
             "source": {
@@ -162,6 +223,83 @@
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
             },
             "time": "2016-12-17 17:04:53"
+        },
+        {
+            "name": "ffpi/node-updates",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
+                "reference": "9c21fc7b9e85d4b66df7a3e7b0b83209315fc77e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/9c21fc7b9e85d4b66df7a3e7b0b83209315fc77e",
+                "reference": "9c21fc7b9e85d4b66df7a3e7b0b83209315fc77e",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms": "7.6.*"
+            },
+            "replace": {
+                "ffpi_node_updates": "self.version",
+                "typo3-ter/ffpi-node-updates": "self.version"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "2.2.*",
+                "phploc/phploc": "3.0.*",
+                "phpmd/phpmd": "2.4.*",
+                "phpunit/phpunit": "5.4.*",
+                "sebastian/phpcpd": "2.0.*",
+                "squizlabs/php_codesniffer": "2.6.*"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FFPI\\FfpiNodeUpdates\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": []
+            },
+            "scripts": {
+                "post-update-cmd": [],
+                "post-install-cmd": [],
+                "post-autoload-dump": [
+                    "mkdir -p .Build/Web/typo3conf/ext/",
+                    "[ -L .Build/Web/typo3conf/ext/ffpi_node_updates ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/ffpi_node_updates"
+                ]
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Quiatkowski",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Node Updates",
+            "homepage": "https://pinneberg.freifunk.net",
+            "keywords": [
+                "Freifunk",
+                "Pinneberg",
+                "ffmap-backend",
+                "nodes",
+                "notification"
+            ],
+            "support": {
+                "forum": "https://pinneberg.freifunk.net/forum/",
+                "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates",
+                "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/issues"
+            },
+            "time": "2016-12-30 12:00:37"
         },
         {
             "name": "ffpi/nodecounter",
@@ -617,16 +755,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.14",
+            "version": "v2.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e"
+                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a871ba00e0f604dceac64c56c27f99fbeaf4854e",
-                "reference": "a871ba00e0f604dceac64c56c27f99fbeaf4854e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d5643cd095e5e37d31e004bb2606b5dd7e96602f",
+                "reference": "d5643cd095e5e37d31e004bb2606b5dd7e96602f",
                 "shasum": ""
             },
             "require": {
@@ -674,7 +812,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-15 23:02:12"
+            "time": "2016-12-06 11:59:35"
         },
         {
             "name": "symfony/debug",
@@ -735,16 +873,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.8.14",
+            "version": "v2.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "0023b024363dfc0cd21262e556f25a291fe8d7fd"
+                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/0023b024363dfc0cd21262e556f25a291fe8d7fd",
-                "reference": "0023b024363dfc0cd21262e556f25a291fe8d7fd",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/c0f10576335743b881ac1ed39d18c0fa66048775",
+                "reference": "c0f10576335743b881ac1ed39d18c0fa66048775",
                 "shasum": ""
             },
             "require": {
@@ -780,7 +918,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-03 07:52:58"
+            "time": "2016-12-13 09:38:12"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -878,48 +1016,6 @@
             ],
             "description": "A calendar combining all the functions of the existing calendar extensions plus adding some new features. It is based on the ical standard",
             "time": "2016-02-10 21:37:50"
-        },
-        {
-            "name": "typo3-ter/extension-builder",
-            "version": "7.6.0",
-            "dist": {
-                "type": "t3x",
-                "url": "https://typo3.org/extensions/repository/download/extension_builder/7.6.0/t3x/",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "typo3/cms-core": ">= 7.6.0, <= 7.6.99"
-            },
-            "replace": {
-                "extension_builder": "self.version",
-                "typo3-ter/extension_builder": "self.version"
-            },
-            "suggest": {
-                "typo3-ter/phpunit": "*"
-            },
-            "type": "typo3-cms-extension",
-            "autoload": {
-                "classmap": [
-                    ""
-                ],
-                "exclude-from-classmap": [
-                    "Migrations",
-                    "Tests",
-                    "tests",
-                    "class.ext_update.php"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Nico de Haen",
-                    "email": "mail@ndh-websolutions.de",
-                    "company": "",
-                    "username": "nicodh"
-                }
-            ],
-            "description": "The Extension Builder helps you build and manage your Extbase based TYPO3 extensions.",
-            "time": "2015-11-23 00:02:22"
         },
         {
             "name": "typo3-ter/realurl",
@@ -1586,7 +1682,9 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "ebt/extension-builder": 20,
         "ffpi/ffpi-theme": 20,
+        "ffpi/node-updates": 20,
         "freifunk-pinneberg/website-vm": 20
     },
     "prefer-stable": false,
