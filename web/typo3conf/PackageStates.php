@@ -383,10 +383,16 @@ return [
         ],
         'extension_builder' => [
             'manifestPath' => '',
-            'composerName' => 'ebt/extension_builder',
+            'composerName' => 'ebt/extension-builder',
             'state' => 'active',
             'packagePath' => 'typo3conf/ext/extension_builder/',
             'classesPath' => 'Classes/',
+            'suggestions' => [],
+        ],
+        'ffpi_node_updates' => [
+            'composerName' => 'ffpi/node-updates',
+            'state' => 'active',
+            'packagePath' => 'typo3conf/ext/ffpi_node_updates/',
             'suggestions' => [],
         ],
         'ffpi_nodecounter' => [
