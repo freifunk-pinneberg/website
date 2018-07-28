@@ -43,7 +43,7 @@
     "ffpi/ffpi-theme": "dev-master",
     "ffpi/node-updates": "dev-master",
     "ffpi/nodecounter": "2.*",
-    "typo3-ter/sf-yubikey": "^1.1"
+    "derhansen/sf_yubikey": "^2.1"
   },
   "require-dev": {
     "phing/phing": "2.9.*",
