@@ -31,19 +31,22 @@
   "config": {
     "vendor-dir": "vendor",
     "bin-dir": "bin",
-    "web-dir": "web"
+    "web-dir": "web",
+    "platform": {
+      "php": "7.1"
+    }
   },
   "minimum-stability": "beta",
   "require": {
-    "typo3/cms": "~7.6",
-    "typo3-ter/realurl": "~1.13.6",
-    "typo3-ter/cal": "1.*",
-    "ebt/extension-builder": "dev-master",
-    "typo3-ter/static-info-tables": "*",
-    "ffpi/ffpi-theme": "dev-master",
-    "ffpi/node-updates": "dev-master",
-    "ffpi/nodecounter": "2.*",
-    "derhansen/sf_yubikey": "^2.1"
+    "typo3/cms": "~8.7",
+    "typo3-ter/realurl": "2.*",
+    "typo3-ter/cal": "^1.11",
+    "sjbr/static-info-tables": "^6.7",
+    "ffpi/ffpi-theme": "dev-feature/v2",
+    "ffpi/node-updates": "dev-feature/typo3v9",
+    "ffpi/nodecounter": "dev-feature/typo3v9",
+    "derhansen/sf_yubikey": "^2.2",
+    "ext-curl": "*"
   },
   "require-dev": {
     "phing/phing": "2.9.*",
