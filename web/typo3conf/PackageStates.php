@@ -20,29 +20,29 @@ return [
         'fluid' => [
             'packagePath' => 'typo3/sysext/fluid/',
         ],
-        'install' => [
-            'packagePath' => 'typo3/sysext/install/',
-        ],
-        'info' => [
-            'packagePath' => 'typo3/sysext/info/',
-        ],
-        'linkvalidator' => [
-            'packagePath' => 'typo3/sysext/linkvalidator/',
-        ],
         'frontend' => [
             'packagePath' => 'typo3/sysext/frontend/',
         ],
         'fluid_styled_content' => [
             'packagePath' => 'typo3/sysext/fluid_styled_content/',
         ],
-        'info_pagetsconfig' => [
-            'packagePath' => 'typo3/sysext/info_pagetsconfig/',
+        'filelist' => [
+            'packagePath' => 'typo3/sysext/filelist/',
         ],
-        'extensionmanager' => [
-            'packagePath' => 'typo3/sysext/extensionmanager/',
+        'impexp' => [
+            'packagePath' => 'typo3/sysext/impexp/',
         ],
-        'lang' => [
-            'packagePath' => 'typo3/sysext/lang/',
+        'form' => [
+            'packagePath' => 'typo3/sysext/form/',
+        ],
+        'install' => [
+            'packagePath' => 'typo3/sysext/install/',
+        ],
+        'recordlist' => [
+            'packagePath' => 'typo3/sysext/recordlist/',
+        ],
+        'backend' => [
+            'packagePath' => 'typo3/sysext/backend/',
         ],
         'recycler' => [
             'packagePath' => 'typo3/sysext/recycler/',
@@ -56,32 +56,8 @@ return [
         'rte_ckeditor' => [
             'packagePath' => 'typo3/sysext/rte_ckeditor/',
         ],
-        'rsaauth' => [
-            'packagePath' => 'typo3/sysext/rsaauth/',
-        ],
-        'saltedpasswords' => [
-            'packagePath' => 'typo3/sysext/saltedpasswords/',
-        ],
-        'func' => [
-            'packagePath' => 'typo3/sysext/func/',
-        ],
-        'wizard_crpages' => [
-            'packagePath' => 'typo3/sysext/wizard_crpages/',
-        ],
-        'wizard_sortpages' => [
-            'packagePath' => 'typo3/sysext/wizard_sortpages/',
-        ],
-        'version' => [
-            'packagePath' => 'typo3/sysext/version/',
-        ],
-        'workspaces' => [
-            'packagePath' => 'typo3/sysext/workspaces/',
-        ],
         'about' => [
             'packagePath' => 'typo3/sysext/about/',
-        ],
-        'backend' => [
-            'packagePath' => 'typo3/sysext/backend/',
         ],
         'belog' => [
             'packagePath' => 'typo3/sysext/belog/',
@@ -89,38 +65,26 @@ return [
         'beuser' => [
             'packagePath' => 'typo3/sysext/beuser/',
         ],
-        'context_help' => [
-            'packagePath' => 'typo3/sysext/context_help/',
-        ],
-        'cshmanual' => [
-            'packagePath' => 'typo3/sysext/cshmanual/',
-        ],
-        'documentation' => [
-            'packagePath' => 'typo3/sysext/documentation/',
+        'extensionmanager' => [
+            'packagePath' => 'typo3/sysext/extensionmanager/',
         ],
         'felogin' => [
             'packagePath' => 'typo3/sysext/felogin/',
         ],
-        'filelist' => [
-            'packagePath' => 'typo3/sysext/filelist/',
-        ],
         'filemetadata' => [
             'packagePath' => 'typo3/sysext/filemetadata/',
         ],
-        'form' => [
-            'packagePath' => 'typo3/sysext/form/',
+        'info' => [
+            'packagePath' => 'typo3/sysext/info/',
         ],
-        'impexp' => [
-            'packagePath' => 'typo3/sysext/impexp/',
+        'redirects' => [
+            'packagePath' => 'typo3/sysext/redirects/',
         ],
-        'lowlevel' => [
-            'packagePath' => 'typo3/sysext/lowlevel/',
+        'rsaauth' => [
+            'packagePath' => 'typo3/sysext/rsaauth/',
         ],
-        'recordlist' => [
-            'packagePath' => 'typo3/sysext/recordlist/',
-        ],
-        'sv' => [
-            'packagePath' => 'typo3/sysext/sv/',
+        'seo' => [
+            'packagePath' => 'typo3/sysext/seo/',
         ],
         'sys_note' => [
             'packagePath' => 'typo3/sysext/sys_note/',
@@ -134,6 +98,9 @@ return [
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
         ],
+        'workspaces' => [
+            'packagePath' => 'typo3/sysext/workspaces/',
+        ],
         'ffpi_node_updates' => [
             'packagePath' => 'typo3conf/ext/ffpi_node_updates/',
         ],
@@ -142,18 +109,6 @@ return [
         ],
         'ffpi_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_theme/',
-        ],
-        'static_info_tables' => [
-            'packagePath' => 'typo3conf/ext/static_info_tables/',
-        ],
-        'realurl' => [
-            'packagePath' => 'typo3conf/ext/realurl/',
-        ],
-        'cal' => [
-            'packagePath' => 'typo3conf/ext/cal/',
-        ],
-        'sf_yubikey' => [
-            'packagePath' => 'typo3conf/ext/sf_yubikey/',
         ],
     ],
     'version' => 5,
