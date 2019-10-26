@@ -1,11 +1,6 @@
 ## TYPO3 v6.2
 # Ignore several upload and file directories.
-/web/fileadmin/_processed_/
-/web/fileadmin/_temp_/
-/web/fileadmin/downloads/
-/web/fileadmin/bilder/
-/web/fileadmin/user_upload/
-/web/fileadmin/videos/
+/web/fileadmin/
 /web/uploads/
 /web/typo3conf/l10n/
 
@@ -18,7 +13,7 @@
 /typo3conf/temp_fieldInfo.php
 /typo3conf/deprecation_*.log
 /typo3conf/AdditionalConfiguration.php
-
+/var/
 # Ignore system folders
 web/typo3
 web/typo3_src

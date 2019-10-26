@@ -17,6 +17,10 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/"
     }
   ],
@@ -38,12 +42,15 @@
     "typo3/cms-workspaces": "9.*",
     "typo3/cms-backend": "9.*",
     "ffpi/ffpi-theme": "dev-feature/v2",
+    "ffpi/ffpi-helgo-theme": "dev-master",
     "ffpi/node-updates": "dev-feature/typo3v9",
     "ffpi/nodecounter": "dev-feature/typo3v9",
+    "friendsoftypo3/extension-builder": "^9.10",
+    "derhansen/sf_yubikey": "^2.2",
     "ext-curl": "*",
     "ext-openssl": "*",
     "ext-json": "*",
-    "friendsoftypo3/extension-builder": "^9.10"
+    "svewap/ws-scss": "^1.1"
   },
   "require-dev": {
     "phing/phing": "2.9.*"
