@@ -1,12 +1,9 @@
-base: 'https://pinneberg.freifunk.net/'
+base: 'https://helgoland.freifunk.net'
 baseVariants:
   -
-    base: 'http://pinneberg.freifunk.net.local'
+    base: 'http://helgoland.freifunk.net.local'
     condition: 'applicationContext == "Development"'
-errorHandling:
-  -
-    errorCode: '404'
-    errorHandler: Fluid
+errorHandling: {  }
 languages:
   -
     title: Deutsch
@@ -34,5 +31,5 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: en-us-gb
-rootPageId: 1
+rootPageId: 55
 routes: {  }
