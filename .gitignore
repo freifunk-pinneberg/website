@@ -22,6 +22,7 @@ web/typo3_src-*
 web/index.php
 # Ignore temp directory.
 /typo3temp/
+/web/typo3temp/
 
 #composer
 vendor

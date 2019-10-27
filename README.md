@@ -1,7 +1,9 @@
 # Install for Development
 `composer install`
-`cd _vm`
-`vagrant up`
 
-# Install for Production
+# production install (local)
 `composer install --no-dev --optimize-autoloader`
+
+# deploy (remote)
+`composer install`  
+`./bin/dep deploy`

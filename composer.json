@@ -53,7 +53,7 @@
     "svewap/ws-scss": "^1.1"
   },
   "require-dev": {
-    "phing/phing": "2.9.*"
+    "deployer/deployer": "6.4.*"
   },
   "extra": {
     "typo3/cms": {
