@@ -7,13 +7,13 @@
 #ignore extensions
 /web/typo3conf/ext/
 
-
 # Ignore cache
-/typo3conf/temp_CACHED*
-/typo3conf/temp_fieldInfo.php
-/typo3conf/deprecation_*.log
-/typo3conf/AdditionalConfiguration.php
+web/typo3conf/temp_CACHED*
+web/typo3conf/temp_fieldInfo.php
+web/typo3conf/deprecation_*.log
+web/typo3conf/AdditionalConfiguration.php
 /var/
+
 # Ignore system folders
 web/typo3
 web/typo3_src
