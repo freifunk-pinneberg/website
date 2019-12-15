@@ -18,7 +18,7 @@ set('typo3_webroot', 'web');
 set('git_tty', true); 
 
 // Shared files/dirs between deploys 
-add('shared_files', []);
+add('shared_files', ['web/typo3conf/AdditionalConfiguration.php']);
 add('shared_dirs', ['var']);
 
 // Writable dirs by web server 
