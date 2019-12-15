@@ -38,6 +38,12 @@ return [
         'install' => [
             'packagePath' => 'typo3/sysext/install/',
         ],
+        'info' => [
+            'packagePath' => 'typo3/sysext/info/',
+        ],
+        'linkvalidator' => [
+            'packagePath' => 'typo3/sysext/linkvalidator/',
+        ],
         'recordlist' => [
             'packagePath' => 'typo3/sysext/recordlist/',
         ],
@@ -74,8 +80,8 @@ return [
         'filemetadata' => [
             'packagePath' => 'typo3/sysext/filemetadata/',
         ],
-        'info' => [
-            'packagePath' => 'typo3/sysext/info/',
+        'lowlevel' => [
+            'packagePath' => 'typo3/sysext/lowlevel/',
         ],
         'redirects' => [
             'packagePath' => 'typo3/sysext/redirects/',
@@ -109,6 +115,12 @@ return [
         ],
         'ffpi_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_theme/',
+        ],
+        'ffpi_helgo_theme' => [
+            'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
+        ],
+        'ws_scss' => [
+            'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
     ],
     'version' => 5,
