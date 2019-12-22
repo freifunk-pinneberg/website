@@ -119,6 +119,9 @@ return [
         'ffpi_helgo_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
         ],
+        'rte_ckeditor_image' => [
+            'packagePath' => 'typo3conf/ext/rte_ckeditor_image/',
+        ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
