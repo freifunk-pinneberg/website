@@ -18,7 +18,7 @@ return [
     ],
     'EXT' => [
         'extConf' => [
-            'backend' => 'a:6:{s:9:"loginLogo";s:0:"";s:19:"loginHighlightColor";s:0:"";s:20:"loginBackgroundImage";s:0:"";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:0:"";}',
+            'backend' => 'a:6:{s:9:"loginLogo";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";s:19:"loginHighlightColor";s:7:"#dc0067";s:20:"loginBackgroundImage";s:0:"";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";}',
             'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
             'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
@@ -35,12 +35,12 @@ return [
     ],
     'EXTENSIONS' => [
         'backend' => [
-            'backendFavicon' => '',
+            'backendFavicon' => 'EXT:ffpi_theme/Resources/Public/Images/Logo.svg',
             'backendLogo' => '',
             'loginBackgroundImage' => '',
             'loginFootnote' => '',
-            'loginHighlightColor' => '',
-            'loginLogo' => '',
+            'loginHighlightColor' => '#dc0067',
+            'loginLogo' => 'EXT:ffpi_theme/Resources/Public/Images/Logo.svg',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',

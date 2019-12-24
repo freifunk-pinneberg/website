@@ -1,4 +1,4 @@
-## TYPO3 v6.2
+## TYPO3
 # Ignore several upload and file directories.
 /web/fileadmin/
 /web/uploads/
