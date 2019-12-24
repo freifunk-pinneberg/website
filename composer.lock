@@ -108,32 +108,32 @@
         },
         {
             "name": "derhansen/sf_yubikey",
-            "version": "2.2.4",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/derhansen/sf_yubikey.git",
-                "reference": "575a34c6ac1d37f52e26027f71fc5db925b8a35c"
+                "reference": "3520948b699c7559a3119b26c3a220e9ada4ba79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/derhansen/sf_yubikey/zipball/575a34c6ac1d37f52e26027f71fc5db925b8a35c",
-                "reference": "575a34c6ac1d37f52e26027f71fc5db925b8a35c",
+                "url": "https://api.github.com/repos/derhansen/sf_yubikey/zipball/3520948b699c7559a3119b26c3a220e9ada4ba79",
+                "reference": "3520948b699c7559a3119b26c3a220e9ada4ba79",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
+                "typo3/cms-core": "^8.7 || ^9.5"
             },
             "replace": {
-                "sf_yubikey": "self.version",
                 "typo3-ter/sf-yubikey": "self.version"
             },
             "require-dev": {
-                "nimut/testing-framework": "2.x-dev || 3.x-dev || 4.x-dev"
+                "nimut/testing-framework": "3.x-dev || 4.x-dev"
             },
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
+                    "extension-key": "sf_yubikey",
                     "cms-package-dir": "{$vendor-dir}/typo3/cms",
                     "web-dir": ".Build/Web"
                 }
@@ -150,9 +150,9 @@
             "authors": [
                 {
                     "name": "Torben Hansen",
-                    "role": "Developer",
                     "email": "torben@derhansen.com",
-                    "homepage": "https://www.derhansen.com"
+                    "homepage": "https://www.derhansen.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Two-factor authentication with a YubiKey OTP",
@@ -162,7 +162,7 @@
                 "Two-factor Authentication",
                 "yubikey"
             ],
-            "time": "2019-01-05T11:21:09+00:00"
+            "time": "2019-12-24T12:26:03+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git",
-                "reference": "0825134080de2a2e19e17a06e3aa6c3bf7ecb897"
+                "reference": "327bf348af36323122e2fcd077c1da6110d0b6ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/zipball/0825134080de2a2e19e17a06e3aa6c3bf7ecb897",
-                "reference": "0825134080de2a2e19e17a06e3aa6c3bf7ecb897",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/zipball/327bf348af36323122e2fcd077c1da6110d0b6ac",
+                "reference": "327bf348af36323122e2fcd077c1da6110d0b6ac",
                 "shasum": ""
             },
             "require": {
@@ -649,7 +649,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/tree/master",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/issues"
             },
-            "time": "2019-10-26T20:40:58+00:00"
+            "time": "2019-12-24T11:16:04+00:00"
         },
         {
             "name": "ffpi/ffpi-theme",
@@ -657,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "bfd4725ae54c39b411bb829148788c897a354807"
+                "reference": "dba153a0ac6d0be7ca4977f196a268e37617fd9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/bfd4725ae54c39b411bb829148788c897a354807",
-                "reference": "bfd4725ae54c39b411bb829148788c897a354807",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/dba153a0ac6d0be7ca4977f196a268e37617fd9c",
+                "reference": "dba153a0ac6d0be7ca4977f196a268e37617fd9c",
                 "shasum": ""
             },
             "require": {
@@ -671,6 +671,9 @@
             "replace": {
                 "ffpi/ffpi-theme": "self.version",
                 "ffpi_theme": "self.version"
+            },
+            "suggest": {
+                "ffpi/nodecounter": "Displays a Freifunk Nodecounter"
             },
             "type": "typo3-cms-extension",
             "autoload": {
@@ -702,7 +705,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
             },
-            "time": "2019-12-22T14:53:32+00:00"
+            "time": "2019-12-24T15:59:00+00:00"
         },
         {
             "name": "ffpi/node-updates",
@@ -710,12 +713,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "ed4cd52441a8465bbab1f330472b7ae5a1d29636"
+                "reference": "3c066622b7e01bb05bb8160008398302a80e604b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/ed4cd52441a8465bbab1f330472b7ae5a1d29636",
-                "reference": "ed4cd52441a8465bbab1f330472b7ae5a1d29636",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/3c066622b7e01bb05bb8160008398302a80e604b",
+                "reference": "3c066622b7e01bb05bb8160008398302a80e604b",
                 "shasum": ""
             },
             "require": {
@@ -781,7 +784,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/issues"
             },
-            "time": "2019-12-22T15:47:20+00:00"
+            "time": "2019-12-24T15:59:55+00:00"
         },
         {
             "name": "ffpi/nodecounter",
@@ -789,12 +792,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "7787b17fa3d14e2b10bb1a0b688ddafa8cc9d4c9"
+                "reference": "d4f4992f708c2785550222103df0cd44058903b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/zipball/7787b17fa3d14e2b10bb1a0b688ddafa8cc9d4c9",
-                "reference": "7787b17fa3d14e2b10bb1a0b688ddafa8cc9d4c9",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/zipball/d4f4992f708c2785550222103df0cd44058903b6",
+                "reference": "d4f4992f708c2785550222103df0cd44058903b6",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +847,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Theme for Freifunk Pinneberg",
+            "description": "Displays a Freifunk Nodecounter",
             "homepage": "https://pinneberg.freifunk.net",
             "keywords": [
                 "Freifunk",
@@ -858,7 +861,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/issues"
             },
-            "time": "2019-12-22T15:36:50+00:00"
+            "time": "2019-12-24T13:06:55+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",
