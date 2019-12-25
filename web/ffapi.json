@@ -20,8 +20,8 @@
       "Public Free Wifi",
       "Free internet access"
     ],
-    "nodes": 215,
-    "lastchange": "2016-03-19T17:28:00+1"
+    "nodes": 499,
+    "lastchange": "2019-12-24T20:28:00+1"
   },
   "feeds": [
     {
@@ -29,12 +29,6 @@
       "category": "blog",
       "type": "rss",
       "url": "https://pinneberg.freifunk.net/news/?type=200"
-    },
-    {
-      "name": "Freifunk Pinneberg Kalender",
-      "category": "ics",
-      "type": "ics",
-      "url": "https://pinneberg.freifunk.net/kalender.html?type=150"
     }
   ],
   "support": {
