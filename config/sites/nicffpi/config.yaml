@@ -19,3 +19,10 @@ languages:
     languageId: '0'
 rootPageId: 102
 routes: {  }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: .html
+    map:
+      .html: 0
+      sitemap.xml: 1533906435

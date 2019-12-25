@@ -33,3 +33,9 @@ languages:
     flag: en-us-gb
 rootPageId: 123
 routes: {  }
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: '.html'
+    map:
+      '.html': 0
