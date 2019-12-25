@@ -69,12 +69,10 @@ return [
         'processor_path_lzw' => '/usr/bin/',
     ],
     'MAIL' => [
+        'defaultMailFromAddress' => 'support@pinneberg.freifunk.net',
+        'defaultMailFromName' => 'Freifunk Pinneberg',
         'transport' => 'sendmail',
         'transport_sendmail_command' => '/usr/sbin/sendmail -t -i ',
-        'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
-        'transport_smtp_username' => '',
     ],
     'SYS' => [
         'caching' => [
