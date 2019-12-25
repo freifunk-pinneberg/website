@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "89348910d2eb56a5e9c695cca672fa2b",
+    "content-hash": "03d09989f0a3ad2b786cb56a6b6ceca0",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -606,12 +606,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git",
-                "reference": "327bf348af36323122e2fcd077c1da6110d0b6ac"
+                "reference": "50f533adb95aa6678d5c1bd13fdea40026b36318"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/zipball/327bf348af36323122e2fcd077c1da6110d0b6ac",
-                "reference": "327bf348af36323122e2fcd077c1da6110d0b6ac",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/zipball/50f533adb95aa6678d5c1bd13fdea40026b36318",
+                "reference": "50f533adb95aa6678d5c1bd13fdea40026b36318",
                 "shasum": ""
             },
             "require": {
@@ -649,20 +649,20 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/tree/master",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/issues"
             },
-            "time": "2019-12-24T11:16:04+00:00"
+            "time": "2019-12-25T17:19:38+00:00"
         },
         {
             "name": "ffpi/ffpi-theme",
-            "version": "dev-feature/v2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "dba153a0ac6d0be7ca4977f196a268e37617fd9c"
+                "reference": "59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/dba153a0ac6d0be7ca4977f196a268e37617fd9c",
-                "reference": "dba153a0ac6d0be7ca4977f196a268e37617fd9c",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0",
+                "reference": "59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0",
                 "shasum": ""
             },
             "require": {
@@ -705,7 +705,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
             },
-            "time": "2019-12-24T15:59:00+00:00"
+            "time": "2019-12-25T17:57:13+00:00"
         },
         {
             "name": "ffpi/node-updates",
@@ -713,12 +713,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "3c066622b7e01bb05bb8160008398302a80e604b"
+                "reference": "2513722e2a0f5a07c34325f773ea73b110aaa530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/3c066622b7e01bb05bb8160008398302a80e604b",
-                "reference": "3c066622b7e01bb05bb8160008398302a80e604b",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/2513722e2a0f5a07c34325f773ea73b110aaa530",
+                "reference": "2513722e2a0f5a07c34325f773ea73b110aaa530",
                 "shasum": ""
             },
             "require": {
@@ -784,20 +784,20 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/issues"
             },
-            "time": "2019-12-24T15:59:55+00:00"
+            "time": "2019-12-25T18:46:11+00:00"
         },
         {
             "name": "ffpi/nodecounter",
-            "version": "dev-feature/typo3v9",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "d4f4992f708c2785550222103df0cd44058903b6"
+                "reference": "8e216d879749b5b8fb2ab3f4dec17c6a577f1c83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/zipball/d4f4992f708c2785550222103df0cd44058903b6",
-                "reference": "d4f4992f708c2785550222103df0cd44058903b6",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/zipball/8e216d879749b5b8fb2ab3f4dec17c6a577f1c83",
+                "reference": "8e216d879749b5b8fb2ab3f4dec17c6a577f1c83",
                 "shasum": ""
             },
             "require": {
@@ -861,7 +861,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/issues"
             },
-            "time": "2019-12-24T13:06:55+00:00"
+            "time": "2019-12-25T17:42:06+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",

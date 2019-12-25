@@ -33,9 +33,10 @@ host('pinneberg.freifunk.net')
     
 // Tasks
 
-task('build', function () {
-    run('cd {{release_path}} && build');
-});
+
+//task('build', function () {
+//    run('cd {{release_path}} && build');
+//});
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
