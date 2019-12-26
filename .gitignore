@@ -1,23 +1,18 @@
-## TYPO3 v6.2
+## TYPO3
 # Ignore several upload and file directories.
-/web/fileadmin/_processed_/
-/web/fileadmin/_temp_/
-/web/fileadmin/downloads/
-/web/fileadmin/bilder/
-/web/fileadmin/user_upload/
-/web/fileadmin/videos/
+/web/fileadmin/
 /web/uploads/
 /web/typo3conf/l10n/
 
 #ignore extensions
 /web/typo3conf/ext/
 
-
 # Ignore cache
-/typo3conf/temp_CACHED*
-/typo3conf/temp_fieldInfo.php
-/typo3conf/deprecation_*.log
-/typo3conf/AdditionalConfiguration.php
+web/typo3conf/temp_CACHED*
+web/typo3conf/temp_fieldInfo.php
+web/typo3conf/deprecation_*.log
+web/typo3conf/AdditionalConfiguration.php
+/var/
 
 # Ignore system folders
 web/typo3
@@ -27,6 +22,7 @@ web/typo3_src-*
 web/index.php
 # Ignore temp directory.
 /typo3temp/
+/web/typo3temp/
 
 #composer
 vendor

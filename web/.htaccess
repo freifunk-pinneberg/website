@@ -32,7 +32,6 @@
 #
 ####
 
-
 ### ------ Text basierte Dateien komprimieren - Begin ------ ###
 <IfModule mod_deflate.c>
 	### Kompression für bestimmte MIME types
@@ -43,7 +42,7 @@
 	AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
 	AddOutputFilterByType DEFLATE font/truetype font/opentype
 	### Kompression für bestimmte Dateien
-	<FilesMatch "\.(js|css|woff|ttf|eot|svg)$">
+	<FilesMatch "\.(js|css|woff|woff2|ttf|eot|svg)$">
 		SetOutputFilter DEFLATE
 	</FilesMatch>
 </IfModule>
@@ -53,15 +52,16 @@
 AddType application/font-ttf .ttf
 AddType application/font-eot .eot
 AddType application/font-otf .otf
-AddType application/x-font-woff .woff
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
 AddType image/svg+xml .svg
 
 ### ------ Browser caching - begin ------ ###
 ### Enable long browser caching for JavaScript, image and CSS files.
-<FilesMatch "\.(js|css|png|jpg|jpeg|gif|mp4|webm|ogv|woff|ttf|eot|pdf|svg|svgz)$">
+<FilesMatch "\.(js|css|png|jpg|jpeg|gif|mp4|webm|ogv|woff|woff2|ttf|eot|pdf|svg|svgz)$">
 	<IfModule mod_expires.c>
 		ExpiresActive on
-		ExpiresDefault "access plus 30 days"
+		ExpiresDefault "access plus 60 days"
 	</IfModule>
 	### Set ETag
 	FileETag MTime Size
@@ -119,8 +119,8 @@ RewriteEngine On
 	RewriteCond %{HTTP_HOST} ^freifunk-pinneberg\.de$
 	RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
 
-        RewriteCond %{HTTP_HOST} ^www.freifunk-pinneberg\.de$
-        RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
+    RewriteCond %{HTTP_HOST} ^www.freifunk-pinneberg\.de$
+    RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
 
 	# WWW entfernen
 	RewriteCond %{HTTP_HOST} ^www\.pinneberg\.freifunk\.net$ 
@@ -135,12 +135,8 @@ RewriteEngine On
 #RewriteBase /
 
 # Rules to set ApplicationContext based on hostname
-#RewriteCond %{HTTP_HOST} ^dev\.example\.com$
-#RewriteRule .? - [E=TYPO3_CONTEXT:Development]
-#RewriteCond %{HTTP_HOST} ^staging\.example\.com$
-#RewriteRule .? - [E=TYPO3_CONTEXT:Production/Staging]
-#RewriteCond %{HTTP_HOST} ^www\.example\.com$
-#RewriteRule .? - [E=TYPO3_CONTEXT:Production]
+RewriteCond %{HTTP_HOST} ^pinneberg\.freifunk\.net\.local$
+RewriteRule .? - [E=TYPO3_CONTEXT:Development]
 
 # Rule for versioned static files, configured through:
 # - $TYPO3_CONF_VARS['BE']['versionNumberInFilename']

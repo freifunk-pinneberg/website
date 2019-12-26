@@ -1,0 +1,45 @@
+base: 'https://pinneberg.freifunk.net/'
+baseVariants:
+  -
+    base: 'http://pinneberg.freifunk.net.local'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=41'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+  -
+    title: Englisch
+    enabled: true
+    languageId: '1'
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: en-us-gb
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: .html
+    map:
+      .html: 0
+      sitemap.xml: 1533906435
