@@ -657,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0"
+                "reference": "a8d45e300941cdffce6a47a05d9115e8e579e7cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0",
-                "reference": "59f3bbf9dfd4e0731cdcb68dc493a021f5de01d0",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_theme/zipball/a8d45e300941cdffce6a47a05d9115e8e579e7cd",
+                "reference": "a8d45e300941cdffce6a47a05d9115e8e579e7cd",
                 "shasum": ""
             },
             "require": {
@@ -705,7 +705,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/issues"
             },
-            "time": "2019-12-25T17:57:13+00:00"
+            "time": "2019-12-26T16:57:58+00:00"
         },
         {
             "name": "ffpi/node-updates",
@@ -713,15 +713,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "2513722e2a0f5a07c34325f773ea73b110aaa530"
+                "reference": "9136ad2891d8b6217c4b715cfb71304aceb5bd5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/2513722e2a0f5a07c34325f773ea73b110aaa530",
-                "reference": "2513722e2a0f5a07c34325f773ea73b110aaa530",
+                "url": "https://api.github.com/repos/freifunk-pinneberg/typo3-tx_ffpi_node_updates/zipball/9136ad2891d8b6217c4b715cfb71304aceb5bd5e",
+                "reference": "9136ad2891d8b6217c4b715cfb71304aceb5bd5e",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "ext-json": "*",
                 "ext-openssl": "*",
                 "typo3/cms-core": "8.7.0 - 9.5.99"
@@ -784,7 +785,7 @@
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates",
                 "issues": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/issues"
             },
-            "time": "2019-12-25T18:46:11+00:00"
+            "time": "2019-12-26T17:19:33+00:00"
         },
         {
             "name": "ffpi/nodecounter",
