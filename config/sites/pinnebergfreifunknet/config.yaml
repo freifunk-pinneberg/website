@@ -1,4 +1,4 @@
-base: 'https://pinneberg.freifunk.net/'
+base: 'https://pinneberg.freifunk.net'
 baseVariants:
   -
     base: 'http://pinneberg.freifunk.net.local'
@@ -54,4 +54,6 @@ routeEnhancers:
     plugin: Nodeabo
     routes:
       - { routePath: '/confirm/{email}/{secret}', _controller: 'Abo::cofirm', _arguments: {'email': 'email', 'secret': 'secret'} }
+      - { routePath: '/unsubscribe/{email}/{secret}', _controller: 'Abo::removeForm', _arguments: {'email': 'aboRemoveDemand/email', 'secret': 'aboRemoveDemand/secret'} }
+      - { routePath: '/subscribe', _controller: 'Abo::create' }
     defaultController: 'Abo::new'
