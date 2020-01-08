@@ -4,7 +4,7 @@ return [
         'debug' => true,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$pbkdf2-sha256$25000$UsYVa8/p6pf4fgnNM3unQg$xnNf5N.9wb2Npu9rwZqekkQgeOIk5/fS3Wh7jrxSwm8',
-        'loginSecurityLevel' => 'rsa',
+        'loginSecurityLevel' => 'normal',
     ],
     'DB' => [
         'Connections' => [
@@ -18,9 +18,8 @@ return [
     ],
     'EXT' => [
         'extConf' => [
-            'backend' => 'a:6:{s:9:"loginLogo";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";s:19:"loginHighlightColor";s:7:"#dc0067";s:20:"loginBackgroundImage";s:0:"";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";}',
+            'backend' => 'a:6:{s:9:"loginLogo";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";s:19:"loginHighlightColor";s:7:"#dc0067";s:20:"loginBackgroundImage";s:61:"/fileadmin/bilder/news/backbone_suche/IMG_20160715_153752.jpg";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";}',
             'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
-            'rsaauth' => 'a:1:{s:18:"temporaryDirectory";s:0:"";}',
             'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
         ],
     ],
@@ -37,7 +36,7 @@ return [
         'backend' => [
             'backendFavicon' => 'EXT:ffpi_theme/Resources/Public/Images/Logo.svg',
             'backendLogo' => '',
-            'loginBackgroundImage' => '',
+            'loginBackgroundImage' => '/fileadmin/bilder/news/backbone_suche/IMG_20160715_153752.jpg',
             'loginFootnote' => '',
             'loginHighlightColor' => '#dc0067',
             'loginLogo' => 'EXT:ffpi_theme/Resources/Public/Images/Logo.svg',
@@ -46,9 +45,6 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'rsaauth' => [
-            'temporaryDirectory' => '',
-        ],
         'scheduler' => [
             'maxLifetime' => '1440',
             'showSampleTasks' => '1',
@@ -56,7 +52,7 @@ return [
     ],
     'FE' => [
         'debug' => true,
-        'loginSecurityLevel' => 'rsa',
+        'loginSecurityLevel' => 'normal',
     ],
     'GFX' => [
         'jpg_quality' => '80',
