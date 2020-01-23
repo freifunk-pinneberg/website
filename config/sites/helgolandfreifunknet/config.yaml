@@ -69,16 +69,16 @@ routes:
   -
     route: favicon.ico
     type: uri
-    source: '/typo3conf/ext/ffpi_theme/Resources/Public/favicon.ico'
+    source: '/typo3conf/ext/ffpi_helgo_theme/Resources/Public/favicon.ico'
   -
     route: favicon.svg
     type: uri
-    source: '/typo3conf/ext/ffpi_theme/Resources/Public/favicon.svg'
+    source: '/typo3conf/ext/ffpi_helgo_theme/Resources/Public/favicon.svg'
   -
     route: sitemapindex.xml
     type: uri
-    source: 't3://page?uid=2&type=1533906435'
+    source: 't3://page?uid=124&type=1533906435'
   -
     route: freifunk-api.json
     type: uri
-    source: 't3://page?uid=2&type=202001192011'
+    source: 't3://page?uid=124&type=202001192011'
