@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
+        'debug' => false,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$pbkdf2-sha256$25000$UsYVa8/p6pf4fgnNM3unQg$xnNf5N.9wb2Npu9rwZqekkQgeOIk5/fS3Wh7jrxSwm8',
         'loginSecurityLevel' => 'normal',
@@ -47,11 +47,11 @@ return [
         ],
         'scheduler' => [
             'maxLifetime' => '1440',
-            'showSampleTasks' => '1',
+            'showSampleTasks' => '0',
         ],
     ],
     'FE' => [
-        'debug' => true,
+        'debug' => false,
         'loginSecurityLevel' => 'normal',
     ],
     'GFX' => [
@@ -69,6 +69,10 @@ return [
         'defaultMailFromName' => 'Freifunk Pinneberg',
         'transport' => 'sendmail',
         'transport_sendmail_command' => '/usr/sbin/sendmail -t -i ',
+        'transport_smtp_encrypt' => '',
+        'transport_smtp_password' => '',
+        'transport_smtp_server' => 'localhost:25',
+        'transport_smtp_username' => '',
     ],
     'SYS' => [
         'caching' => [
@@ -85,14 +89,14 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '*',
-        'displayErrors' => 1,
+        'devIPmask' => '',
+        'displayErrors' => 0,
         'encryptionKey' => 'fba28922e8a061e471addf1a39863551c70cb3a3c38aae6357ffb2a2ea07a611fc90352c20ef59840930f6a5e1053df1',
-        'exceptionalErrors' => 12290,
+        'exceptionalErrors' => 4096,
         'features' => [
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Freifunk Pinneberg',
-        'systemLogLevel' => 0,
+        'systemLogLevel' => 2,
     ],
 ];

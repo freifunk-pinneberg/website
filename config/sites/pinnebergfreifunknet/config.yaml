@@ -1,4 +1,4 @@
-base: 'https://pinneberg.freifunk.net/'
+base: 'https://pinneberg.freifunk.net'
 baseVariants:
   -
     base: 'http://pinneberg.freifunk.net.local'
@@ -43,3 +43,17 @@ routeEnhancers:
     map:
       .html: 0
       sitemap.xml: 1533906435
+  RssFeed:
+    type: PageType
+    limitToPages: [5]
+    map:
+      .rss: 200
+  NodeAbo:
+    type: Extbase
+    extension: ffpi_node_updates
+    plugin: Nodeabo
+    routes:
+      - { routePath: '/confirm/{email}/{secret}', _controller: 'Abo::cofirm', _arguments: {'email': 'email', 'secret': 'secret'} }
+      - { routePath: '/unsubscribe/{email}/{secret}', _controller: 'Abo::removeForm', _arguments: {'email': 'aboRemoveDemand/email', 'secret': 'aboRemoveDemand/secret'} }
+      - { routePath: '/subscribe', _controller: 'Abo::create' }
+    defaultController: 'Abo::new'
