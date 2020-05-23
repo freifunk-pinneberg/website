@@ -8,4 +8,4 @@ class user_functions {
     return $content;
     }
 }
-?>
+

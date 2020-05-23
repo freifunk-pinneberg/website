@@ -123,8 +123,8 @@ RewriteEngine On
 	RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
 
 	# HTTP nach HTTPS
-	RewriteCond %{SERVER_PORT}   !^443$
-	RewriteRule  (.*)  https://%{HTTP_HOST}/$1   [R=301,L]
+	#RewriteCond %{SERVER_PORT}   !^443$
+	#RewriteRule  (.*)  https://%{HTTP_HOST}/$1   [R=301,L]
 
 
 # Change this path, if your TYPO3 installation is located in a subdirectory of the website root.
