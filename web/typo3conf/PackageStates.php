@@ -125,6 +125,9 @@ return [
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
+        'ffpi_firmware_list' => [
+            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
+        ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
