@@ -42,6 +42,7 @@ routeEnhancers:
     map:
       .html: 0
       freifunk-api.json: 202001192011
+      sitemap.xml: 1533906435
   RssFeed:
     type: PageType
     limitToPages:

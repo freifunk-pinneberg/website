@@ -22,6 +22,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_firmware_list/"
     }
   ],
   "config": {
@@ -49,6 +53,7 @@
     "typo3/cms-seo": "9.*",
     "ffpi/ffpi-theme": "dev-master",
     "ffpi/ffpi-helgo-theme": "dev-master",
+    "ffpi/firmware-list": "dev-master",
     "ffpi/node-updates": "dev-feature/typo3v9",
     "ffpi/nodecounter": "dev-master",
     "friendsoftypo3/extension-builder": "^9.10",
@@ -78,7 +83,8 @@
   "autoload": {
     "psr-4": {
       "FFPI\\FfpiNodecounter\\": "web/typo3conf/ext/ffpi_nodecounter/Classes",
-      "FFPI\\FfpiNodeUpdates\\": "web/typo3conf/ext/ffpi_node_updates/Classes"
+      "FFPI\\FfpiNodeUpdates\\": "web/typo3conf/ext/ffpi_node_updates/Classes",
+      "FFPI\\FfpiFirmwareList\\": "web/typo3conf/ext/ffpi_firmware_list/Classes"
     }
   }
 }
