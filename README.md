@@ -15,3 +15,4 @@ Install these from source for Development (Composer can do that also for you)
 * [ffpi_helgo_theme](https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme) - ffpi_theme overrides for Helgoland
 * [ffpi_nodecounter](https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter) - Nodecounter on the top right of the website.
 * [ffpi_node_updates](https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates) - Node and Gateway monitoring with E-Mail notifications
+* [ffpi_firmware_list](https://github.com/freifunk-pinneberg/typo3-tx_ffpi_firmware_list) - Parses the Firmware directory and generates a list with download links

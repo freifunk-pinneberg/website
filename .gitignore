@@ -20,6 +20,8 @@ web/typo3_src
 web/typo3_src-*
 /.htaccess
 web/index.php
+ENABLE_INSTALL_TOOL
+
 # Ignore temp directory.
 /typo3temp/
 /web/typo3temp/

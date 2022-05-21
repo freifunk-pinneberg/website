@@ -3,7 +3,7 @@ baseVariants:
   -
     base: 'http://helgoland.freifunk.net.local'
     condition: 'applicationContext == "Development"'
-errorHandling: {  }
+errorHandling: { }
 languages:
   -
     title: Deutsch
