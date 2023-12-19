@@ -1,4 +1,5 @@
 <?php
+
 namespace Deployer;
 
 require 'recipe/typo3.php';
@@ -15,13 +16,13 @@ set('branch', 'feature/v2');
 set('typo3_webroot', 'web');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', true);
 
-// Shared files/dirs between deploys 
+// Shared files/dirs between deploys
 add('shared_files', ['web/typo3conf/AdditionalConfiguration.php']);
 add('shared_dirs', ['var']);
 
-// Writable dirs by web server 
+// Writable dirs by web server
 add('writable_dirs', ['var']);
 
 
@@ -30,7 +31,7 @@ add('writable_dirs', ['var']);
 host('pinneberg.freifunk.net')
     ->forwardAgent(true)
     ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v3');
-    
+
 // Tasks
 
 

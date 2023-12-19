@@ -3,7 +3,7 @@ baseVariants:
   -
     base: 'http://nic.ffpi.local'
     condition: 'applicationContext == "Development"'
-errorHandling: {  }
+errorHandling: { }
 languages:
   -
     title: Deutsch
@@ -18,7 +18,7 @@ languages:
     flag: de
     languageId: '0'
 rootPageId: 102
-routes: {  }
+routes: { }
 routeEnhancers:
   PageTypeSuffix:
     type: PageType

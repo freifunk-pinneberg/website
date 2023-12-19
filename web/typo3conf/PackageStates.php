@@ -107,6 +107,9 @@ return [
         'workspaces' => [
             'packagePath' => 'typo3/sysext/workspaces/',
         ],
+        'rte_ckeditor_image' => [
+            'packagePath' => 'typo3conf/ext/rte_ckeditor_image/',
+        ],
         'ffpi_node_updates' => [
             'packagePath' => 'typo3conf/ext/ffpi_node_updates/',
         ],
@@ -119,8 +122,11 @@ return [
         'ffpi_helgo_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
         ],
-        'rte_ckeditor_image' => [
-            'packagePath' => 'typo3conf/ext/rte_ckeditor_image/',
+        'ffpi_firmware_list' => [
+            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
+        ],
+        'ffpi_firmware_list' => [
+            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
         ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
