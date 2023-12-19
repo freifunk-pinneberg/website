@@ -8,24 +8,24 @@
       "url": "https://composer.typo3.org/"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter/"
+      "type": "git",
+      "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme/"
+      "type": "git",
+      "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_helgo_theme/"
+      "type": "git",
+      "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates/"
+      "type": "git",
+      "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_firmware_list/"
+      "type": "git",
+      "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_firmware_list.git"
     }
   ],
   "config": {
@@ -34,36 +34,39 @@
     "web-dir": "web",
     "platform": {
       "php": "7.2"
+    },
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
     }
   },
   "minimum-stability": "beta",
   "require": {
-    "typo3/cms-core": "9.5.*",
-    "typo3/cms-base-distribution": "9.*",
-    "typo3/cms-rsaauth": "9.*",
-    "typo3/cms-recycler": "9.*",
-    "typo3/cms-filemetadata": "9.*",
-    "typo3/cms-workspaces": "9.*",
-    "typo3/cms-backend": "9.*",
-    "typo3/cms-beuser": "9.*",
-    "typo3/cms-redirects": "9.*",
-    "typo3/cms-linkvalidator": "9.*",
-    "typo3/cms-lowlevel": "9.*",
-    "typo3/cms-lang": "9.*",
-    "typo3/cms-seo": "9.*",
-    "ffpi/ffpi-theme": "dev-master",
+    "typo3/cms-core": "10.4.*",
+    "typo3/cms-base-distribution": "10.*",
+    "typo3/cms-recycler": "10.*",
+    "typo3/cms-filemetadata": "10.*",
+    "typo3/cms-workspaces": "10.*",
+    "typo3/cms-backend": "10.*",
+    "typo3/cms-beuser": "10.*",
+    "typo3/cms-redirects": "10.*",
+    "typo3/cms-linkvalidator": "10.*",
+    "typo3/cms-lowlevel": "10.*",
+    "typo3/cms-lang": "10.*",
+    "typo3/cms-seo": "10.*",
+    "typo3/cms-scheduler": "10.*",
+    "ffpi/ffpi-theme": "dev-feature/typo3v10",
     "ffpi/ffpi-helgo-theme": "dev-master",
-    "ffpi/firmware-list": "dev-master",
-    "ffpi/node-updates": "dev-feature/typo3v9",
-    "ffpi/nodecounter": "dev-master",
-    "friendsoftypo3/extension-builder": "^9.10",
-    "derhansen/sf_yubikey": "^2.2",
-    "helhum/typo3-console": "5.*",
+    "ffpi/firmware-list": "dev-feature/typo3-10",
+    "ffpi/node-updates": "dev-feature/typo3-10",
+    "ffpi/nodecounter": "dev-feature/typo3v10",
+    "friendsoftypo3/extension-builder": "*",
+    "helhum/typo3-console": "*",
     "ext-curl": "*",
     "ext-openssl": "*",
     "ext-json": "*",
     "svewap/ws-scss": "^1.1",
-    "netresearch/rte-ckeditor-image": "^9.0"
+    "netresearch/rte-ckeditor-image": "^10.0"
   },
   "require-dev": {
     "deployer/deployer": "6.4.*"
@@ -82,9 +85,6 @@
   },
   "autoload": {
     "psr-4": {
-      "FFPI\\FfpiNodecounter\\": "web/typo3conf/ext/ffpi_nodecounter/Classes",
-      "FFPI\\FfpiNodeUpdates\\": "web/typo3conf/ext/ffpi_node_updates/Classes",
-      "FFPI\\FfpiFirmwareList\\": "web/typo3conf/ext/ffpi_firmware_list/Classes"
     }
   }
 }

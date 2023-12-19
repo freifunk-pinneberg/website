@@ -3,6 +3,7 @@
 /web/fileadmin/
 /web/uploads/
 /web/typo3conf/l10n/
+/web/downloads/
 
 #ignore extensions
 /web/typo3conf/ext/

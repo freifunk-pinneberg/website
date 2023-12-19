@@ -16,19 +16,14 @@ return [
             ],
         ],
     ],
-    'EXT' => [
-        'extConf' => [
-            'backend' => 'a:6:{s:9:"loginLogo";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";s:19:"loginHighlightColor";s:7:"#dc0067";s:20:"loginBackgroundImage";s:61:"/fileadmin/bilder/news/backbone_suche/IMG_20160715_153752.jpg";s:13:"loginFootnote";s:0:"";s:11:"backendLogo";s:0:"";s:14:"backendFavicon";s:47:"EXT:ffpi_theme/Resources/Public/Images/Logo.svg";}',
-            'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
-            'scheduler' => 'a:2:{s:11:"maxLifetime";s:4:"1440";s:15:"showSampleTasks";s:1:"1";}',
-        ],
-    ],
+    'EXT' => [],
     'EXTCONF' => [
         'lang' => [
             'availableLanguages' => [
                 'da',
                 'de',
                 'no',
+                'uk',
             ],
         ],
     ],
@@ -97,6 +92,5 @@ return [
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Freifunk Pinneberg',
-        'systemLogLevel' => 2,
     ],
 ];
