@@ -4,15 +4,18 @@
   "location": {
     "city": "Pinneberg",
     "country": "DE",
-    "lat": 53.7000,
-    "lon": 9.7300
+    "geoCode": {
+      "lat": 53.7,
+      "lon": 9.73
+    }
   },
   "contact": {
     "email": "info@pinneberg.freifunk.net",
     "irc": "irc://irc.hackint.org:6667#ffpi",
     "phone": "+49-4101-300313",
     "facebook": "https://www.facebook.com/FreifunkPinneberg",
-    "twitter": "@FreifunkPI"
+    "twitter": "@FreifunkPI",
+    "mastodon": "https://norden.social/@FreifunkPI"
   },
   "state": {
     "focus": [
@@ -20,8 +23,8 @@
       "Public Free Wifi",
       "Free internet access"
     ],
-    "nodes": 499,
-    "lastchange": "2019-12-24T20:28:00+1"
+    "nodes": 567,
+    "lastchange": "2019-12-24T20:28:00+01:00"
   },
   "feeds": [
     {
@@ -82,14 +85,14 @@
       "technicalType" : "ffmap",
       "interval" : "1min",
       "mapType" : "geographical",
-      "url" : "http://meshviewer.pinneberg.freifunk.net/"
+      "url" : "https://meshviewer.pinneberg.freifunk.net/"
     },
     {
       "technicalType" : "nodelist",
       "interval": "1min",
       "mapType" : "list/status",
-      "url" : "http://meshviewer.pinneberg.freifunk.net/data/nodelist.json"
+      "url" : "https://meshviewer.pinneberg.freifunk.net/data/nodelist.json"
     }
   ],
-  "api": "0.4.8"
+  "api": "0.5.2"
 }

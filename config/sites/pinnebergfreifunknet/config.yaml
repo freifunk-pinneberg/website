@@ -40,7 +40,7 @@ languages:
     enabled: true
     languageId: 2
     base: /no/
-    typo3Language: default
+    typo3Language: no
     locale: nb_NO.UTF-8
     iso-639-1: no
     navigationTitle: Norsk
@@ -54,7 +54,7 @@ languages:
     enabled: true
     languageId: 3
     base: /dk/
-    typo3Language: default
+    typo3Language: dk
     locale: dk_DK.UTF-8
     iso-639-1: no
     navigationTitle: Dansk
