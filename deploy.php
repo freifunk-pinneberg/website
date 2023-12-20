@@ -10,7 +10,7 @@ set('application', 'ffpi-webseite');
 // Project repository
 set('repository', 'git@github.com:freifunk-pinneberg/website.git');
 set('git_recursive', false);
-set('branch', 'feature/v2');
+set('branch', 'master');
 
 // TYPO3 Path
 set('typo3_webroot', 'web');
@@ -20,7 +20,7 @@ set('git_tty', true);
 
 // Shared files/dirs between deploys
 add('shared_files', ['web/typo3conf/AdditionalConfiguration.php']);
-add('shared_dirs', ['var']);
+add('shared_dirs', ['var', 'fileadmin']);
 
 // Writable dirs by web server
 add('writable_dirs', ['var']);
