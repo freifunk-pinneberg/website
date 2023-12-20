@@ -53,8 +53,8 @@ return [
         'recycler' => [
             'packagePath' => 'typo3/sysext/recycler/',
         ],
-        'reports' => [
-            'packagePath' => 'typo3/sysext/reports/',
+        'redirects' => [
+            'packagePath' => 'typo3/sysext/redirects/',
         ],
         'setup' => [
             'packagePath' => 'typo3/sysext/setup/',
@@ -71,6 +71,9 @@ return [
         'beuser' => [
             'packagePath' => 'typo3/sysext/beuser/',
         ],
+        'dashboard' => [
+            'packagePath' => 'typo3/sysext/dashboard/',
+        ],
         'extensionmanager' => [
             'packagePath' => 'typo3/sysext/extensionmanager/',
         ],
@@ -82,12 +85,6 @@ return [
         ],
         'lowlevel' => [
             'packagePath' => 'typo3/sysext/lowlevel/',
-        ],
-        'redirects' => [
-            'packagePath' => 'typo3/sysext/redirects/',
-        ],
-        'rsaauth' => [
-            'packagePath' => 'typo3/sysext/rsaauth/',
         ],
         'seo' => [
             'packagePath' => 'typo3/sysext/seo/',
@@ -110,6 +107,9 @@ return [
         'rte_ckeditor_image' => [
             'packagePath' => 'typo3conf/ext/rte_ckeditor_image/',
         ],
+        'ffpi_firmware_list' => [
+            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
+        ],
         'ffpi_node_updates' => [
             'packagePath' => 'typo3conf/ext/ffpi_node_updates/',
         ],
@@ -121,12 +121,6 @@ return [
         ],
         'ffpi_helgo_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
-        ],
-        'ffpi_firmware_list' => [
-            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
-        ],
-        'ffpi_firmware_list' => [
-            'packagePath' => 'typo3conf/ext/ffpi_firmware_list/',
         ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',

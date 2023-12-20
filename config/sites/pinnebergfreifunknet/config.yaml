@@ -12,7 +12,7 @@ languages:
   -
     title: Deutsch
     enabled: true
-    languageId: '0'
+    languageId: 0
     base: /
     typo3Language: de
     locale: de_DE.UTF-8
@@ -24,7 +24,7 @@ languages:
   -
     title: Englisch
     enabled: true
-    languageId: '1'
+    languageId: 1
     base: /en/
     typo3Language: default
     locale: en_US.UTF-8
@@ -35,6 +35,48 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: en-us-gb
+  -
+    title: Norwegisch
+    enabled: true
+    languageId: 2
+    base: /no/
+    typo3Language: no
+    locale: nb_NO.UTF-8
+    iso-639-1: no
+    navigationTitle: Norsk
+    hreflang: nb-NO
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1,0'
+    flag: bv
+  -
+    title: Dänisch
+    enabled: true
+    languageId: 3
+    base: /dk/
+    typo3Language: dk
+    locale: dk_DK.UTF-8
+    iso-639-1: no
+    navigationTitle: Dansk
+    hreflang: nb-NO
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1,0'
+    flag: dk
+  -
+    title: Ukrainisch
+    enabled: true
+    languageId: 4
+    base: /ua/
+    typo3Language: uk
+    locale: uk_UA.UTF-8
+    iso-639-1: uk
+    navigationTitle: Українська
+    hreflang: uk-UA
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1,0'
+    flag: ua
 rootPageId: 1
 routeEnhancers:
   PageTypeSuffix:
