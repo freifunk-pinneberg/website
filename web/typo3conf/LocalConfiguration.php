@@ -59,6 +59,21 @@ return [
         'processor_path' => '/usr/bin/',
         'processor_path_lzw' => '/usr/bin/',
     ],
+    'LOG' => [
+        'TYPO3' => [
+            'CMS' => [
+                'deprecations' => [
+                    'writerConfiguration' => [
+                        'notice' => [
+                            'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
+                                'disabled' => true,
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
     'MAIL' => [
         'defaultMailFromAddress' => 'support@pinneberg.freifunk.net',
         'defaultMailFromName' => 'Freifunk Pinneberg',
@@ -79,8 +94,23 @@ return [
                         'system',
                     ],
                     'options' => [
-                        'defaultLifetime' => 0,
+                        'defaultLifetime' => 8640,
                     ],
+                ],
+                'hash' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'imagesizes' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'pages' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'pagesection' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                ],
+                'rootline' => [
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                 ],
             ],
         ],
@@ -92,5 +122,8 @@ return [
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Freifunk Pinneberg',
+        'systemMaintainers' => [
+            1,
+        ],
     ],
 ];
