@@ -797,7 +797,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "5c105aaeed5c8eda7df060be3bc5ed35e3d8d6dd"
+                "reference": "292558057ad3e5e87a4c27b99eac51410c1b5c8a"
             },
             "require": {
                 "typo3/cms-core": "9.5.0 - 10.4.99"
@@ -847,7 +847,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme"
             },
-            "time": "2023-12-19T12:27:57+00:00"
+            "time": "2023-12-30T19:23:57+00:00"
         },
         {
             "name": "ffpi/firmware-list",
@@ -893,7 +893,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "7171885ee16a33386841cfc6855654d0a0d04db7"
+                "reference": "a8dc89869ba43dacfa53da46a72b969078e05c50"
             },
             "require": {
                 "ext-curl": "*",
@@ -952,7 +952,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates"
             },
-            "time": "2022-05-26T15:07:57+00:00"
+            "time": "2023-12-23T16:30:35+00:00"
         },
         {
             "name": "ffpi/nodecounter",
