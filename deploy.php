@@ -34,6 +34,14 @@ host('pinneberg.freifunk.net')
 
 // Tasks
 
+// Custom Symlink Task
+desc('Create symlinks');
+task('create_symlinks', function () {
+    run('cd {{release_path}}/web && ln -s /var/www/vhosts/download.pinneberg.freifunk.net/ download');
+    run('cd {{release_path}}/web && ln -s /var/www/vhosts/forum.pinneberg.freifunk.net/ forum');
+    run('cd {{release_path}}/web && ln -s /var/www/vhosts/piwik.pinneberg.freifunk.net/ piwik');
+});
+before('deploy:unlock', 'create_symlinks');
 
 //task('build', function () {
 //    run('cd {{release_path}} && build');
