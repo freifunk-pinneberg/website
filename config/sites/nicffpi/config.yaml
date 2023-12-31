@@ -1,7 +1,7 @@
 base: 'http://nic.ffpi'
 baseVariants:
   -
-    base: 'http://nic.ffpi.local'
+    base: '//nic.ffpi.local'
     condition: 'applicationContext == "Development"'
 errorHandling: { }
 languages:
