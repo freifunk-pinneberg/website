@@ -69,7 +69,8 @@
     "netresearch/rte-ckeditor-image": "^10.0"
   },
   "require-dev": {
-    "deployer/deployer": "6.4.*"
+    "deployer/deployer": "6.4.*",
+    "rector/rector": "0.13.4"
   },
   "extra": {
     "typo3/cms": {

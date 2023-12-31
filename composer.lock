@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "928c90ab6437e3730f0c5f0bb7fca0d5",
+    "content-hash": "afc77809f87fc008bab8583dd2f72561",
     "packages": [
         {
             "name": "css-crush/css-crush",
@@ -797,10 +797,10 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "292558057ad3e5e87a4c27b99eac51410c1b5c8a"
+                "reference": "8215dfd92ba09ff6b987b60c51a0609314cef991"
             },
             "require": {
-                "typo3/cms-core": "9.5.0 - 10.4.99"
+                "typo3/cms-core": "10.0.0 - 10.4.99"
             },
             "replace": {
                 "ffpi/ffpi-theme": "self.version",
@@ -847,7 +847,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme"
             },
-            "time": "2023-12-30T19:23:57+00:00"
+            "time": "2023-12-31T13:06:07+00:00"
         },
         {
             "name": "ffpi/firmware-list",
@@ -855,10 +855,10 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_firmware_list.git",
-                "reference": "dc0cfc57f46d40da811fd97b546c2f88f24cdec4"
+                "reference": "9dadb5acca3a11bdab46fbf421b4d3bfb91ef7b6"
             },
             "require": {
-                "typo3/cms-core": "9.5.0 - 10.4.99"
+                "typo3/cms-core": "10.0.0 - 10.4.99"
             },
             "replace": {
                 "ffpi_firmware_list": "self.version",
@@ -885,7 +885,7 @@
                 }
             ],
             "description": "Freifunk Firmware List",
-            "time": "2023-12-19T12:12:51+00:00"
+            "time": "2023-12-31T11:35:11+00:00"
         },
         {
             "name": "ffpi/node-updates",
@@ -893,13 +893,13 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "a8dc89869ba43dacfa53da46a72b969078e05c50"
+                "reference": "61fa2ada91105b5e727ab85fe430a1f1ae6fc6c9"
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "ext-openssl": "*",
-                "typo3/cms-core": "9.5.0 - 10.4.99",
+                "typo3/cms-core": "10.0.0 - 10.4.99",
                 "typo3/cms-scheduler": "*"
             },
             "replace": {
@@ -952,7 +952,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates"
             },
-            "time": "2023-12-23T16:30:35+00:00"
+            "time": "2023-12-31T12:19:12+00:00"
         },
         {
             "name": "ffpi/nodecounter",
@@ -960,10 +960,10 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "2bdf09446b9c57b9821bd340bf2ba9a81e616c38"
+                "reference": "50bebceb2b7c6721f495ffe42d3f065ee5f3a96f"
             },
             "require": {
-                "typo3/cms-core": "9.5.0 - 10.4.99"
+                "typo3/cms-core": "10.0.0 - 10.4.99"
             },
             "replace": {
                 "ffpi_nodecounter": "self.version",
@@ -1015,7 +1015,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter"
             },
-            "time": "2023-12-19T12:24:40+00:00"
+            "time": "2023-12-31T11:46:20+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",
@@ -7607,6 +7607,68 @@
             "time": "2019-12-12T13:45:57+00:00"
         },
         {
+            "name": "phpstan/phpstan",
+            "version": "1.10.50",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-12-13T10:59:42+00:00"
+        },
+        {
             "name": "pimple/pimple",
             "version": "v3.2.3",
             "source": {
@@ -7659,6 +7721,66 @@
                 "source": "https://github.com/silexphp/Pimple/tree/master"
             },
             "time": "2018-01-21T07:42:36+00:00"
+        },
+        {
+            "name": "rector/rector",
+            "version": "0.13.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rectorphp/rector.git",
+                "reference": "60b4f87a94e7ed17d4494982ba0cfb5a3f2845fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/60b4f87a94e7ed17d4494982ba0cfb5a3f2845fd",
+                "reference": "60b4f87a94e7ed17d4494982ba0cfb5a3f2845fd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0",
+                "phpstan/phpstan": "^1.7.10"
+            },
+            "conflict": {
+                "phpstan/phpdoc-parser": "<1.2",
+                "rector/rector-cakephp": "*",
+                "rector/rector-doctrine": "*",
+                "rector/rector-laravel": "*",
+                "rector/rector-nette": "*",
+                "rector/rector-phpoffice": "*",
+                "rector/rector-phpunit": "*",
+                "rector/rector-prefixed": "*",
+                "rector/rector-symfony": "*"
+            },
+            "bin": [
+                "bin/rector"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.13-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Instant Upgrade and Automated Refactoring of any PHP code",
+            "support": {
+                "issues": "https://github.com/rectorphp/rector/issues",
+                "source": "https://github.com/rectorphp/rector/tree/0.13.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-06-04T08:19:56+00:00"
         }
     ],
     "aliases": [],
