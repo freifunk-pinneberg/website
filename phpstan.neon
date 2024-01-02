@@ -1,0 +1,22 @@
+includes:
+    - vendor/saschaegerer/phpstan-typo3/extension.neon
+
+parameters:
+    level: 7
+    paths:
+        - web/typo3conf/ext/ffpi_firmware_list
+        - web/typo3conf/ext/ffpi_helgo_theme
+        - web/typo3conf/ext/ffpi_node_updates
+        - web/typo3conf/ext/ffpi_nodecounter
+        - web/typo3conf/ext/ffpi_theme
+    excludePaths:
+        analyseAndScan:
+            - web/typo3conf/ext/*/Tests/*
+    fileExtensions:
+        - php
+    ignoreErrors:
+        - "#Method [a-zA-Z0-9\\\\:\\(\\)]+ has parameter \\$[a-zA-Z0-9_]+ with no value type specified in iterable type array#"
+        - '#^Variable \$_EXTKEY might not be defined\.$#'
+        - '#^Variable \$llFrontend might not be defined\.$#'
+        - '#^Variable \$llCore might not be defined\.$#'
+    phpVersion: 70200 # PHP 7.2
