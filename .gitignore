@@ -4,6 +4,7 @@
 /web/uploads/
 /web/typo3conf/l10n/
 /web/downloads/
+/web/download/
 
 #ignore extensions
 /web/typo3conf/ext/
