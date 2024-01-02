@@ -122,9 +122,6 @@ return [
         'ffpi_helgo_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
         ],
-        'ws_scss' => [
-            'packagePath' => 'typo3conf/ext/ws_scss/',
-        ],
     ],
     'version' => 5,
 ];
