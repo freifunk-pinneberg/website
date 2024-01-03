@@ -1,3 +1,5 @@
+Sitemap: /sitemap.xml
+
 User-agent: *
 Disallow: /mailman/create
 Disallow: /mailman/admin
@@ -5,7 +7,13 @@ Disallow: /mailman/roster
 Disallow: /mailman/options
 Disallow: /kalender.html?tx_cal_controller*
 Disallow: /forum/ucp.php*
-Disallow: *.bin
-Disallow: *.bin.gz
-Disallow: *.img
-Disallow: *.img.gz
+Disallow: /*.bin$
+Disallow: /*.bin.gz$
+Disallow: /*.img$
+Disallow: /*.img.gz$
+Disallow: /*.vmdk$
+Disallow: /*.vdi$
+Crawl-delay: 5
+
+User-agent: Amazonbot
+Disallow: /
