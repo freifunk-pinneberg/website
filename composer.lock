@@ -737,7 +737,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "96ebbd65d02008ccfc15e2e9c7f76c19c5aa7568"
+                "reference": "cc586fb01f11b1eca9f1adb3eb757ca1e97ecb8e"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -787,7 +787,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme"
             },
-            "time": "2024-01-02T14:18:14+00:00"
+            "time": "2024-01-04T17:03:11+00:00"
         },
         {
             "name": "ffpi/firmware-list",
