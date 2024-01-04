@@ -795,7 +795,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_firmware_list.git",
-                "reference": "196c31fb62a2175e666a1c4d60c4d76d4feb3f72"
+                "reference": "792e80001a874434864f6d3a5c782eb67fa8a2ce"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -825,7 +825,7 @@
                 }
             ],
             "description": "Freifunk Firmware List",
-            "time": "2024-01-03T21:49:53+00:00"
+            "time": "2024-01-04T16:27:22+00:00"
         },
         {
             "name": "ffpi/node-updates",
