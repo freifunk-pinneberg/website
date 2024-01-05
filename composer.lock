@@ -795,7 +795,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_firmware_list.git",
-                "reference": "792e80001a874434864f6d3a5c782eb67fa8a2ce"
+                "reference": "1ca32f7a42daecf6e7322d52971fcacd2616d4ac"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -825,7 +825,7 @@
                 }
             ],
             "description": "Freifunk Firmware List",
-            "time": "2024-01-04T16:27:22+00:00"
+            "time": "2024-01-05T16:05:03+00:00"
         },
         {
             "name": "ffpi/node-updates",
@@ -7546,16 +7546,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.50",
+            "version": "1.10.54",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4"
+                "reference": "3e25f279dada0adc14ffd7bad09af2e2fc3523bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/06a98513ac72c03e8366b5a0cb00750b487032e4",
-                "reference": "06a98513ac72c03e8366b5a0cb00750b487032e4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3e25f279dada0adc14ffd7bad09af2e2fc3523bb",
+                "reference": "3e25f279dada0adc14ffd7bad09af2e2fc3523bb",
                 "shasum": ""
             },
             "require": {
@@ -7604,7 +7604,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-12-13T10:59:42+00:00"
+            "time": "2024-01-05T15:50:47+00:00"
         },
         {
             "name": "pimple/pimple",
