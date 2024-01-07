@@ -122,6 +122,9 @@ return [
         'ffpi_helgo_theme' => [
             'packagePath' => 'typo3conf/ext/ffpi_helgo_theme/',
         ],
+        'staticfilecache' => [
+            'packagePath' => 'typo3conf/ext/staticfilecache/',
+        ],
     ],
     'version' => 5,
 ];

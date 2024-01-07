@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c3829fd437e6338758eccb4219520ef",
+    "content-hash": "d2edd29db7783b8f1677498782dd876b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -737,7 +737,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "9abbf6d8eb487e53458623f80961fb6b56ccfdf2"
+                "reference": "a4d9a66eda1c89f5fbf9e825e85e4004a949a8bd"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -787,7 +787,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme"
             },
-            "time": "2024-01-06T22:21:47+00:00"
+            "time": "2024-01-07T14:22:57+00:00"
         },
         {
             "name": "ffpi/firmware-list",
@@ -900,7 +900,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "4c0a03b639b1a79a1440625f2ff97c16dfb838b6"
+                "reference": "b37713b5efda411d88ff64912af8c75727c28a93"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -955,7 +955,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter"
             },
-            "time": "2024-01-02T14:19:59+00:00"
+            "time": "2024-01-07T14:21:52+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",
@@ -1491,6 +1491,96 @@
                 }
             ],
             "time": "2023-01-08T21:22:53+00:00"
+        },
+        {
+            "name": "lochmueller/staticfilecache",
+            "version": "11.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lochmueller/staticfilecache.git",
+                "reference": "0924af2993a8ebe87c1de7b85815aecb9396e1fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lochmueller/staticfilecache/zipball/0924af2993a8ebe87c1de7b85815aecb9396e1fe",
+                "reference": "0924af2993a8ebe87c1de7b85815aecb9396e1fe",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "ext-zlib": "*",
+                "php": "^7.2||^7.3||^7.4",
+                "typo3/cms-core": "^9.5||^10.4",
+                "typo3/cms-extensionmanager": "^9.5||^10.4"
+            },
+            "replace": {
+                "typo3-ter/staticfilecache": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "namelesscoder/typo3-repository-client": "^2.0",
+                "phpmd/phpmd": "^2.6",
+                "phpmetrics/phpmetrics": "^2.5",
+                "rector/rector": "^0.6",
+                "scrutinizer/ocular": "^1.7",
+                "squizlabs/php_codesniffer": "^3.5",
+                "typo3/testing-framework": "^6.1"
+            },
+            "suggest": {
+                "friendsofsymfony/http-cache": "For HTTP proxy cache services like Varnish",
+                "lochmueller/seocli": "Scan websites against SEO criteria and/or trigger the indexing process and cache warming in deployment scripts"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "staticfilecache",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SFC\\Staticfilecache\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Lochmüller",
+                    "email": "tim@fruit-lab.de",
+                    "homepage": "https://github.com/lochmueller",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Transparent StaticFileCache solution using mod_rewrite and mod_expires. Increase performance for static pages by a factor of 230!!",
+            "homepage": "https://github.com/lochmueller/staticfilecache",
+            "keywords": [
+                "StaticFileCache",
+                "TYPO3 CMS",
+                "cache",
+                "file",
+                "magic",
+                "speed",
+                "static"
+            ],
+            "support": {
+                "issues": "https://github.com/lochmueller/staticfilecache/issues",
+                "source": "https://github.com/lochmueller/staticfilecache/tree/11.1.7"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/lochmueller",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/lochmueller",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-06-30T06:54:35+00:00"
         },
         {
             "name": "lolli42/finediff",

@@ -65,7 +65,8 @@
     "ext-curl": "*",
     "ext-openssl": "*",
     "ext-json": "*",
-    "netresearch/rte-ckeditor-image": "^10.0"
+    "netresearch/rte-ckeditor-image": "^10.0",
+    "lochmueller/staticfilecache": "^11.1"
   },
   "require-dev": {
     "deployer/deployer": "6.4.*",
