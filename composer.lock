@@ -688,7 +688,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git",
-                "reference": "5d7d56a0414a336700ff3c07b90b49c2770e00d0"
+                "reference": "b4ee99441a0824f88f52babde37cc419ff5075bf"
             },
             "require": {
                 "ffpi/ffpi-theme": "*",
@@ -729,7 +729,7 @@
             "support": {
                 "forum": "https://pinneberg.freifunk.net/forum/"
             },
-            "time": "2023-12-31T11:39:08+00:00"
+            "time": "2024-01-08T21:40:38+00:00"
         },
         {
             "name": "ffpi/ffpi-theme",
@@ -833,7 +833,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "e9c97802e71463756241ac6fcb03372fddd44796"
+                "reference": "a2eb2eacf7a14af76c9c395380c7c4b51766b456"
             },
             "require": {
                 "ext-curl": "*",
@@ -892,7 +892,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_node_updates"
             },
-            "time": "2024-01-02T14:19:16+00:00"
+            "time": "2024-01-08T21:39:52+00:00"
         },
         {
             "name": "ffpi/nodecounter",
@@ -900,7 +900,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "b37713b5efda411d88ff64912af8c75727c28a93"
+                "reference": "2de8b5b0cca6a2192d5082a772f2a40023f93605"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 10.4.99"
@@ -955,7 +955,7 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_nodecounter"
             },
-            "time": "2024-01-07T14:21:52+00:00"
+            "time": "2024-01-08T21:37:07+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",
@@ -7636,16 +7636,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.54",
+            "version": "1.10.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "3e25f279dada0adc14ffd7bad09af2e2fc3523bb"
+                "reference": "9a88f9d18ddf4cf54c922fbeac16c4cb164c5949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3e25f279dada0adc14ffd7bad09af2e2fc3523bb",
-                "reference": "3e25f279dada0adc14ffd7bad09af2e2fc3523bb",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9a88f9d18ddf4cf54c922fbeac16c4cb164c5949",
+                "reference": "9a88f9d18ddf4cf54c922fbeac16c4cb164c5949",
                 "shasum": ""
             },
             "require": {
@@ -7694,7 +7694,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-05T15:50:47+00:00"
+            "time": "2024-01-08T12:32:40+00:00"
         },
         {
             "name": "pimple/pimple",
