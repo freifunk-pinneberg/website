@@ -3,6 +3,9 @@ baseVariants:
   -
     base: '//pinneberg.freifunk.net.local'
     condition: 'applicationContext == "Development"'
+  -
+    base: '//www.ffpi'
+    condition: 'getenv("HTTP_HOST") == "www.ffpi"'
 errorHandling:
   -
     errorCode: '404'
@@ -93,7 +96,7 @@ routeEnhancers:
       .rss: 200
   NodeAbo:
     type: Extbase
-    extension: ffpi_node_updates
+    extension: 'ffpi_node_updates'
     plugin: Nodeabo
     routes:
       -
