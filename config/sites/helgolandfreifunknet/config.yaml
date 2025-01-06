@@ -35,7 +35,6 @@ rootPageId: 123
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
-    default: .html
     map:
       .html: 0
       freifunk-api.json: 202001192011
@@ -48,7 +47,7 @@ routeEnhancers:
       .rss: 200
   NodeAbo:
     type: Extbase
-    extension: ffpi_node_updates
+    extension: 'ffpi_node_updates'
     plugin: Nodeabo
     routes:
       -
