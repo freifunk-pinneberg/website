@@ -40,6 +40,7 @@ task('create_symlinks', function () {
     run('cd {{release_path}}/web && ln -s /var/www/vhosts/download.pinneberg.freifunk.net/ download');
     run('cd {{release_path}}/web && ln -s /var/www/vhosts/forum.pinneberg.freifunk.net/ forum');
     run('cd {{release_path}}/web && ln -s /var/www/vhosts/piwik.pinneberg.freifunk.net/ piwik');
+    run('cd {{release_path}}/web && ln -s /var/www/vhosts/stats.pinneberg.freifunk.net/ stats');
 });
 before('deploy:unlock', 'create_symlinks');
 
