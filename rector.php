@@ -5,21 +5,33 @@ declare(strict_types=1);
 use Rector\Config\RectorConfig;
 use Rector\Core\Configuration\Option;
 use Rector\Core\ValueObject\PhpVersion;
+use Rector\Set\ValueObject\LevelSetList;
+use Rector\Set\ValueObject\SetList;
 use Ssch\TYPO3Rector\Configuration\Typo3Option;
 use Ssch\TYPO3Rector\FileProcessor\Composer\Rector\ExtensionComposerRector;
 use Ssch\TYPO3Rector\Rector\General\ConvertImplicitVariablesToExplicitGlobalsRector;
 use Ssch\TYPO3Rector\Rector\General\ExtEmConfRector;
 use Ssch\TYPO3Rector\Set\Typo3LevelSetList;
+use Ssch\TYPO3Rector\Set\Typo3SetList;
 
 return static function (RectorConfig $rectorConfig): void {
     $parameters = $rectorConfig->parameters();
 
     $rectorConfig->sets([
-        Typo3LevelSetList::UP_TO_TYPO3_10,
+        // Useful rules, but maybe to RISKY and more for training ;)
+        SetList::CODE_QUALITY,
+        SetList::NAMING,
+
+        // Add TYPO3 rector rules
+        Typo3SetList::DATABASE_TO_DBAL,
+        Typo3SetList::REGISTER_ICONS_TO_ICON,
+        Typo3SetList::UNDERSCORE_TO_NAMESPACE,
+
+        Typo3LevelSetList::UP_TO_TYPO3_11,
     ]);
 
     // In order to have a better analysis from phpstan we teach it here some more things
-    $rectorConfig->phpstanConfig(Typo3Option::PHPSTAN_FOR_RECTOR_PATH);
+    $rectorConfig->phpstanConfig(__DIR__ . '/phpstan.neon');
 
     // FQN classes are not imported by default. If you don't do it manually after every Rector run, enable it by:
     $rectorConfig->importNames();
@@ -89,7 +101,7 @@ return static function (RectorConfig $rectorConfig): void {
      * to GeneralUtility::makeInstance(\TYPO3\CMS\Core\Log\LogManager::class) calls.
      * But be warned, sometimes it produces false positives (edge cases), so watch out
      */
-    // $rectorConfig->rule(\Rector\Php55\Rector\String_\StringClassNameToClassConstantRector::class);
+    $rectorConfig->rule(\Rector\Php55\Rector\String_\StringClassNameToClassConstantRector::class);
 
     // Optional non-php file functionalities:
     // @see https://github.com/sabbelasichon/typo3-rector/blob/main/docs/beyond_php_file_processors.md
@@ -102,11 +114,15 @@ return static function (RectorConfig $rectorConfig): void {
 
     // Rewrite your extbase persistence class mapping from typoscript into php according to official docs.
     // This processor will create a summarized file with all the typoscript rewrites combined into a single file.
-    /* $rectorConfig->ruleWithConfiguration(\Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v10\v0\ExtbasePersistenceTypoScriptRector::class, [
+    $rectorConfig->ruleWithConfiguration(\Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v10\v0\ExtbasePersistenceTypoScriptRector::class, [
         \Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v10\v0\ExtbasePersistenceTypoScriptRector::FILENAME => __DIR__ . '/packages/acme_demo/Configuration/Extbase/Persistence/Classes.php',
-    ]); */
+    ]);
     // Add some general TYPO3 rules
     $rectorConfig->rule(ConvertImplicitVariablesToExplicitGlobalsRector::class);
+
+    // Convert $TYPO3_CONF_VARS to $GLOBALS['TYPO3_CONF_VARS']
+    $rectorConfig->rule(ConvertImplicitVariablesToExplicitGlobalsRector::class);
+
     $rectorConfig->ruleWithConfiguration(ExtEmConfRector::class, [
         ExtEmConfRector::ADDITIONAL_VALUES_TO_BE_REMOVED => []
     ]);
@@ -115,5 +131,5 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     // Modernize your TypoScript include statements for files and move from <INCLUDE /> to @import use the FileIncludeToImportStatementVisitor (introduced with TYPO3 9.0)
-    // $rectorConfig->rule(\Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v9\v0\FileIncludeToImportStatementTypoScriptRector::class);
+    $rectorConfig->rule(\Ssch\TYPO3Rector\FileProcessor\TypoScript\Rector\v9\v0\FileIncludeToImportStatementTypoScriptRector::class);
 };

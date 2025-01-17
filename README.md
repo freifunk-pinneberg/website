@@ -28,9 +28,17 @@ then run `./bin/dep deploy`
 
 # Quality control
 ## phpstan
-PHPStan is a static code Analysis Tool. It's installed as a dev dependency via composer. The configuration is saved in phpstan.neon
+PHPStan is a static code Analysis Tool. It's installed as a dev dependency via composer. The configuration is saved in phpstan.neon  
 You can run it with the command `php ./bin/phpstan`
 
 ## rector
-Rector is a tool for automated Refactoring. It's installed as a dev dependency via composer. The configuration is saved in rector.php
+Rector is a tool for automated Refactoring. It's installed as a dev dependency via composer. The configuration is saved in rector.php  
 You can run it with the command `php ./bin/rector process --dry-run`.
+
+## typo3scan
+typo3scan checks for deprecated code in typo3 extensions  
+You can run it with the command `php bin/typo3scan scan web/typo3conf/ext/`
+
+## TypoScript Lint
+It looks if the typoscript code is beatufull or not.  
+You can run it with the command `php bin/typoscript-lint`
