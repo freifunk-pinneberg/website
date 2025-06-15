@@ -33,7 +33,7 @@
     "bin-dir": "bin",
     "web-dir": "web",
     "platform": {
-      "php": "8.0"
+      "php": "7.4.33"
     },
     "allow-plugins": {
       "typo3/class-alias-loader": true,
