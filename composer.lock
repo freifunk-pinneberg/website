@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d22681814d70a565390c39d9b6fa00f",
+    "content-hash": "439a91d2e267a1305675462e963e0d7c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -847,11 +847,11 @@
         },
         {
             "name": "ffpi/ffpi-helgo-theme",
-            "version": "dev-feature/typo3-11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git",
-                "reference": "c8c85e2cc0a1570e8c7aed7a84e1f1ca6f186a28"
+                "reference": "5dfb3cd4db9c8653a9819f1fbe8d8c4deec5fbe3"
             },
             "require": {
                 "ffpi/ffpi-theme": "*",
@@ -861,6 +861,7 @@
                 "ffpi/ffpi-helgo-theme": "self.version",
                 "ffpi_helgo_theme": "self.version"
             },
+            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -892,15 +893,15 @@
             "support": {
                 "forum": "https://pinneberg.freifunk.net/forum/"
             },
-            "time": "2025-01-15T11:57:41+00:00"
+            "time": "2025-06-15T15:43:36+00:00"
         },
         {
             "name": "ffpi/ffpi-theme",
-            "version": "dev-feature/typo3v11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_theme.git",
-                "reference": "3c5af747f1321cb6619cc723db8675c7dfb318ba"
+                "reference": "343a49b6d0d710f0338585bebf12a83167825280"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 11.5.99"
@@ -914,6 +915,7 @@
                 "ffpi/node-updates": "Allows users to get notifications about offline nodes",
                 "ffpi/nodecounter": "Displays a Freifunk Nodecounter"
             },
+            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -950,15 +952,15 @@
                 "forum": "https://pinneberg.freifunk.net/forum/",
                 "source": "https://github.com/freifunk-pinneberg/typo3-tx_ffpi_theme"
             },
-            "time": "2025-01-15T20:44:58+00:00"
+            "time": "2025-06-15T15:38:59+00:00"
         },
         {
             "name": "ffpi/firmware-list",
-            "version": "dev-feature/typo3-11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_firmware_list.git",
-                "reference": "a1324902db74b7410b338d66d9683b47cab7f947"
+                "reference": "91c64f377af3af5dca0b19e15073be60c648ec9b"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 11.5.99"
@@ -966,6 +968,7 @@
             "replace": {
                 "typo3-ter/ffpi-firmware-list": "self.version"
             },
+            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -987,15 +990,15 @@
                 }
             ],
             "description": "Freifunk Firmware List",
-            "time": "2025-01-15T20:44:27+00:00"
+            "time": "2025-06-15T15:41:30+00:00"
         },
         {
             "name": "ffpi/node-updates",
-            "version": "dev-feature/typo3-11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "ff49133bcf06331d51b2b220111cac5e88ddf5dd"
+                "reference": "8625ccf2f1c611c3f9399ef0a403db6c7e2e400c"
             },
             "require": {
                 "ext-curl": "*",
@@ -1007,6 +1010,7 @@
             "replace": {
                 "typo3-ter/ffpi-node-updates": "self.version"
             },
+            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -1060,15 +1064,15 @@
                     "url": "https://pinneberg.freifunk.net/mitmachen/spenden"
                 }
             ],
-            "time": "2025-01-16T17:04:02+00:00"
+            "time": "2025-06-15T17:25:50+00:00"
         },
         {
             "name": "ffpi/nodecounter",
-            "version": "dev-feature/typo3-11",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_nodecounter.git",
-                "reference": "50520b40b007a4366f68ccc7683b8d7b86a6ad5e"
+                "reference": "0157bea3a5d42cfbf96934ca9d37731437b2fd9c"
             },
             "require": {
                 "typo3/cms-core": "10.0.0 - 11.5.99"
@@ -1076,6 +1080,7 @@
             "replace": {
                 "typo3-ter/ffpi-nodecounter": "self.version"
             },
+            "default-branch": true,
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
@@ -1129,7 +1134,7 @@
                     "url": "https://pinneberg.freifunk.net/mitmachen/spenden"
                 }
             ],
-            "time": "2025-01-15T11:40:27+00:00"
+            "time": "2025-06-15T17:20:05+00:00"
         },
         {
             "name": "friendsoftypo3/extension-builder",
