@@ -30,7 +30,7 @@ add('writable_dirs', ['var']);
 
 host('pinneberg.freifunk.net')
     ->forwardAgent(true)
-    ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v3');
+    ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v4');
 
 // Tasks
 

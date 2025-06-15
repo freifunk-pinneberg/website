@@ -4,31 +4,22 @@
 #
 # This file includes settings for the following configuration options:
 #
-# - Compression via TYPO3
-# - Settings for mod_rewrite (URL-Rewriting)
-# - PHP optimisation
+# - Compression
+# - Caching
+# - MIME types
+# - Cross Origin requests
+# - Rewriting and Access
 # - Miscellaneous
+# - PHP optimisation
 #
 # If you want to use it, you have to copy it to the root folder of your TYPO3 installation (if its
 # not there already) and rename it to '.htaccess'. To make .htaccess files work, you might need to
 # adjust the 'AllowOverride' directive in your Apache configuration file.
 #
 # IMPORTANT: You may need to change this file depending on your TYPO3 installation!
+#            Consider adding this file's content to your webserver's configuration directly for speed improvement
 #
-# Lines starting with a # are treated as comment and ignored by the web server.
-#
-# You should change every occurance of TYPO3root/ to the location where you have your website in.
-# For example:
-# If you have your website located at http://mysite.com/
-# then your TYPO3root/ is just empty (remove 'TYPO3root/')
-# If you have your website located at http://mysite.com/some/path/
-# then your TYPO3root/ is some/path/ (search and replace)
-#
-# You can also use this configuration in your httpd.conf, but then you have to modify some lines,
-# see the comments (search for 'httpd.conf')
-#
-# Questions about this file go to the matching Install mailing list, see
-# http://typo3.org/documentation/mailing-lists/
+# Lots of the options are taken from https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess
 #
 ####
 
@@ -74,8 +65,8 @@ AddType image/svg+xml .svg
 # Compressing resource files will save bandwidth and so improve loading speed especially for users
 # with slower internet connections. TYPO3 can compress the .js and .css files for you.
 # *) Uncomment the following lines and
-# *) Set $TYPO3_CONF_VARS['BE']['compressionLevel'] = '9' for the Backend
-# *) Set $TYPO3_CONF_VARS['FE']['compressionLevel'] = '9' together with the TypoScript properties
+# *) Set $GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = 9 for the Backend
+# *) Set $GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9 together with the TypoScript properties
 #    config.compressJs and config.compressCss for GZIP compression of Frontend JS and CSS files.
 
 #<FilesMatch "\.js\.gzip$">
@@ -99,14 +90,15 @@ AddType image/svg+xml .svg
 ### End: Browser caching of ressource files ###
 
 
-### Begin: Settings for mod_rewrite ###
+
+### Begin: Rewriting and Access ###
 
 # You need rewriting, if you use a URL-Rewriting extension (RealURL, CoolUri).
 
 <IfModule mod_rewrite.c>
 
-# Enable URL rewriting
-RewriteEngine On
+	# Enable URL rewriting
+	RewriteEngine On
 
 	# RSS Feed
 	RewriteRule rss.xml index.php?type=200 [L]
@@ -115,8 +107,8 @@ RewriteEngine On
 	RewriteCond %{HTTP_HOST} ^freifunk-pinneberg\.de$
 	RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
 
-        RewriteCond %{HTTP_HOST} ^www.freifunk-pinneberg\.de$
-        RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www.freifunk-pinneberg\.de$
+	RewriteRule ^(.*)$ https://pinneberg.freifunk.net/$1 [R=301,L]
 
 	# WWW entfernen
 	RewriteCond %{HTTP_HOST} ^www\.pinneberg\.freifunk\.net$
@@ -126,269 +118,202 @@ RewriteEngine On
 	#RewriteCond %{SERVER_PORT}   !^443$
 	#RewriteRule  (.*)  https://%{HTTP_HOST}/$1   [R=301,L]
 
+	# Store the current location in an environment variable CWD to use
+	# mod_rewrite in .htaccess files without knowing the RewriteBase
+	RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+	RewriteRule ^.*$ - [E=CWD:%2]
 
-# Change this path, if your TYPO3 installation is located in a subdirectory of the website root.
-#RewriteBase /
+	# Rules to set ApplicationContext based on hostname
+	RewriteCond %{HTTP_HOST} ^pinneberg\.freifunk\.net\.local$
+	RewriteRule .? - [E=TYPO3_CONTEXT:Development]
 
-# Rules to set ApplicationContext based on hostname
-RewriteCond %{HTTP_HOST} ^pinneberg\.freifunk\.net\.local$
-RewriteRule .? - [E=TYPO3_CONTEXT:Development]
+	# Rule for versioned static files, configured through:
+	# - $GLOBALS['TYPO3_CONF_VARS']['BE']['versionNumberInFilename']
+	# - $GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename']
+	# IMPORTANT: This rule has to be the very first RewriteCond in order to work!
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.+)\.(\d+)\.(php|js|css|png|jpg|gif|gzip)$ %{ENV:CWD}$1.$3 [L]
 
-# Rule for versioned static files, configured through:
-# - $TYPO3_CONF_VARS['BE']['versionNumberInFilename']
-# - $TYPO3_CONF_VARS['FE']['versionNumberInFilename']
-# IMPORTANT: This rule has to be the very first RewriteCond in order to work!
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)\.(\d+)\.(php|js|css|png|jpg|gif|gzip)$ $1.$3 [L]
+	# Access block for folders
+	RewriteRule _(?:recycler|temp)_/ - [F]
+	RewriteRule fileadmin/templates/.*\.(?:txt|ts)$ - [F]
+	RewriteRule ^(?:vendor|typo3_src|typo3temp/var) - [F]
+	RewriteRule (?:typo3conf/ext|typo3/sysext|typo3/ext)/[^/]+/(?:Configuration|Resources/Private|Tests?|Documentation|docs?)/ - [F]
 
-# Basic security checks
-# - Restrict access to deleted files in Recycler directories
-# - Restrict access to TypoScript files in default templates directories
-# - Restrict access to Private extension directories
-# For httpd.conf, use these lines instead of the next ones:
-# RewriteRule ^/TYPO3root/fileadmin/(.*/)?_recycler_/ - [F]
-# RewriteRule ^/TYPO3root/fileadmin/templates/.*(\.txt|\.ts)$ - [F]
-# RewriteRule ^/TYPO3root/typo3conf/ext/[^/]+/Configuration/ - [F]
-# RewriteRule ^/TYPO3root/typo3conf/ext/[^/]+/Resources/Private/ - [F]
-RewriteRule ^fileadmin/(.*/)?_recycler_/ - [F]
-RewriteRule ^fileadmin/templates/.*(\.txt|\.ts)$ - [F]
-RewriteRule ^typo3conf/ext/[^/]+/Configuration/ - [F]
-RewriteRule ^typo3conf/ext/[^/]+/Resources/Private/ - [F]
+	# Block access to all hidden files and directories with the exception of
+	# the visible content from within the `/.well-known/` hidden directory (RFC 5785).
+	RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+	RewriteCond %{SCRIPT_FILENAME} -d [OR]
+	RewriteCond %{SCRIPT_FILENAME} -f
+	RewriteRule (?:^|/)\. - [F]
 
-# Stop rewrite processing, if we are in the typo3/ directory.
-# For httpd.conf, use this line instead of the next one:
-# RewriteRule ^/TYPO3root/(typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/|favicon\.ico) - [L]
-RewriteRule ^(typo3/|fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
+	# Stop rewrite processing, if we are in any other known directory
+	# NOTE: Add your additional local storages here
+	RewriteRule ^(?:fileadmin/|typo3conf/|typo3temp/|uploads/) - [L]
 
+	# If the file/symlink/directory does not exist but is below /typo3/, redirect to the TYPO3 Backend entry point.
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteRule ^typo3/(.*)$ %{ENV:CWD}typo3/index.php [QSA,L]
 
+	### Begin: StaticFileCache (options) ####
 
+    # Set proper content type and encoding for gzipped html.
+    <FilesMatch "\.gzip$">
+       SetEnv no-gzip 1
+       SetEnv no-brotli 1
+       <IfModule mod_headers.c>
+          Header set Content-Encoding gzip
+       </IfModule>
+    </FilesMatch>
+    <FilesMatch "\.gz$">
+       SetEnv no-gzip 1
+       SetEnv no-brotli 1
+       <IfModule mod_headers.c>
+          Header set Content-Encoding gzip
+       </IfModule>
+    </FilesMatch>
+    <FilesMatch "\.br$">
+       SetEnv no-gzip 1
+       SetEnv no-brotli 1
+       <IfModule mod_headers.c>
+          Header set Content-Encoding br
+       </IfModule>
+    </FilesMatch>
 
-### Begin: StaticFileCache (preparation) ####
+    # if there are same problems with ForceType, please try the AddType alternative
+    # Set proper content type gzipped html
+    <FilesMatch "\.gzip$">
+       ForceType text/html
+       # AddType "text/html" .gzip
+    </FilesMatch>
+    <FilesMatch "\.js\.gzip$">
+       ForceType text/javascript
+       # AddType "text/javascript" .gzip
+    </FilesMatch>
+    <FilesMatch "\.js\.gz$">
+       ForceType text/javascript
+       # AddType "text/javascript" .gzip
+    </FilesMatch>
+    <FilesMatch "\.css\.gzip$">
+       ForceType text/css
+       # AddType "text/css" .gzip
+    </FilesMatch>
+    <FilesMatch "\.css\.gz$">
+       ForceType text/css
+       # AddType "text/css" .gzip
+    </FilesMatch>
+    <FilesMatch "\.xml\.gzip$">
+       ForceType text/xml
+       # AddType "text/xml" .gzip
+    </FilesMatch>
+    <FilesMatch "\.rss\.gzip$">
+       ForceType text/xml
+       # AddType "text/xml" .gzip
+    </FilesMatch>
+    <FilesMatch "\.gz$">
+       ForceType text/html
+       # AddType "text/html" .gz
+    </FilesMatch>
+    <FilesMatch "\.js\.gz$">
+       ForceType text/javascript
+       # AddType "text/javascript" .gz
+    </FilesMatch>
+    <FilesMatch "\.css\.gz$">
+       ForceType text/css
+       # AddType "text/css" .gz
+    </FilesMatch>
+    <FilesMatch "\.xml\.gz$">
+       ForceType text/xml
+       # AddType "text/xml" .gz
+    </FilesMatch>
+    <FilesMatch "\.rss\.gz$">
+       ForceType text/xml
+       # AddType "text/xml" .gz
+    </FilesMatch>
+    <FilesMatch "\.br$">
+       ForceType text/html
+       # AddType "text/html" .br
+    </FilesMatch>
+    <FilesMatch "\.xml\.br$">
+       ForceType text/xml
+       # AddType "text/xml" .br
+    </FilesMatch>
+    <FilesMatch "\.rss\.br$">
+       ForceType text/xml
+       # AddType "text/xml" .br
+    </FilesMatch>
 
-# Document root configuration
-RewriteRule .* - [E=SFC_ROOT:%{DOCUMENT_ROOT}]
-# RewriteRule .* - [E=SFC_ROOT:%{DOCUMENT_ROOT}/t3site] # Example if your installation is installed in a directory
-# NOTE: There are cases (apache versions and configuration) where DOCUMENT_ROOT do not exists. Please set the SFC_ROOT to the right directory without DOCUMENT_ROOT then!
+    # Avoid .br files being delivered with Content-Language: br headers
+    <IfModule mod_mime.c>
+       RemoveLanguage .br
+    </IfModule>
 
-# Cleanup URI
-RewriteCond %{REQUEST_URI} ^.*$
-RewriteRule .* - [E=SFC_URI:/%{REQUEST_URI}]
-RewriteCond %{REQUEST_URI} ^/.*$
-RewriteRule .* - [E=SFC_URI:%{REQUEST_URI}]
-RewriteCond %{REQUEST_URI} ^/?$
-RewriteRule .* - [E=SFC_URI:/]
-
-# Cleanup HOST
-RewriteCond %{HTTP_HOST} ^([^:]+)(:[0-9]+)?$
-RewriteRule .* - [E=SFC_HOST:%1]
-
-# Disable cache for EXT:solr indexing requests
-RewriteCond %{HTTP:X-Tx-Solr-Iq} .+
-RewriteRule .* - [E=SFC_HOST:invalid-host]
-
-# Get scheme
-RewriteRule .* - [E=SFC_PROTOCOL:http]
-RewriteCond %{SERVER_PORT} ^443$ [OR]
-RewriteCond %{HTTP:X-Forwarded-Proto} https
-RewriteRule .* - [E=SFC_PROTOCOL:https]
-
-# Get port
-RewriteRule .* - [E=SFC_PORT:80]
-RewriteCond %{ENV:SFC_PROTOCOL} ^https$ [NC]
-RewriteRule .* - [E=SFC_PORT:443]
-RewriteCond %{SERVER_PORT} ^[0-9]+$
-RewriteRule .* - [E=SFC_PORT:%{SERVER_PORT}]
-RewriteCond %{HTTP:X-Forwarded-Port} ^[0-9]+$
-RewriteRule .* - [E=SFC_PORT:%{HTTP:X-Forwarded-Port}]
-
-# Full path for redirect
-RewriteRule .* - [E=SFC_FULLPATH:typo3temp/assets/tx_staticfilecache/%{ENV:SFC_PROTOCOL}_%{ENV:SFC_HOST}_%{ENV:SFC_PORT}%{ENV:SFC_URI}/index]
-
-# Extension (Order: br, gzip, php, default)
-RewriteRule .* - [E=SFC_EXT:]
-RewriteCond %{HTTP:Accept-Encoding} br [NC]
-RewriteRule .* - [E=SFC_EXT:.br]
-RewriteCond %{ENV:SFC_ROOT}/%{ENV:SFC_FULLPATH}%{ENV:SFC_EXT} !-f
-RewriteRule .* - [E=SFC_EXT:]
-RewriteCond %{ENV:SFC_EXT} ^$
-RewriteCond %{HTTP:Accept-Encoding} gzip [NC]
-RewriteRule .* - [E=SFC_EXT:.gz]
-RewriteCond %{ENV:SFC_EXT} ^\.gz$
-RewriteCond %{ENV:SFC_ROOT}/%{ENV:SFC_FULLPATH}%{ENV:SFC_EXT} !-f
-RewriteRule .* - [E=SFC_EXT:]
-RewriteCond %{ENV:SFC_EXT} ^$
-RewriteRule .* - [E=SFC_EXT:.php]
-RewriteCond %{ENV:SFC_ROOT}/%{ENV:SFC_FULLPATH}%{ENV:SFC_EXT} !-f
-RewriteRule .* - [E=SFC_EXT:]
-
-# Write Extension to SFC_FULLPATH
-RewriteRule .* - [E=SFC_FULLPATH:%{ENV:SFC_FULLPATH}%{ENV:SFC_EXT}]
-
-### Begin: StaticFileCache (main) ####
-
-# We only redirect URI's without query strings
-RewriteCond %{QUERY_STRING} ^$
-
-# It only makes sense to do the other checks if a static file actually exists.
-RewriteCond %{ENV:SFC_ROOT}/%{ENV:SFC_FULLPATH} -f
-
-# NO frontend or backend user is logged in. Logged in users may see different
-# information than anonymous users. But the anonymous version is cached. So
-# don't show the anonymous version to logged in users.
-RewriteCond %{HTTP_COOKIE} !staticfilecache [NC]
-
-# Avoid cached versions for workspace preview links of users that are not
-# logged in: https://github.com/lochmueller/staticfilecache/issues/395
-RewriteCond %{HTTP_COOKIE} !ADMCMD_prev [NC]
-
-# We only redirect GET requests
-RewriteCond %{REQUEST_METHOD} GET
-
-# Rewrite the request to the static file.
-RewriteRule .* %{ENV:SFC_ROOT}/%{ENV:SFC_FULLPATH} [L]
-
-# Do not allow direct call the cache entries
-RewriteCond %{ENV:SFC_URI} ^/typo3temp/assets/tx_staticfilecache/.*
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule .* - [F,L]
-
-# Handle application cache
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^.*\.sfc$ %{ENV:CWD}index.php?eID=sfc_manifest [QSA,L]
-
-### Begin: StaticFileCache (options) ####
-
-# Set proper content type and encoding for gzipped html.
-<FilesMatch "\.gzip$">
-   SetEnv no-gzip 1
-   SetEnv no-brotli 1
-   <IfModule mod_headers.c>
-      Header set Content-Encoding gzip
-   </IfModule>
-</FilesMatch>
-<FilesMatch "\.gz$">
-   SetEnv no-gzip 1
-   SetEnv no-brotli 1
-   <IfModule mod_headers.c>
-      Header set Content-Encoding gzip
-   </IfModule>
-</FilesMatch>
-<FilesMatch "\.br$">
-   SetEnv no-gzip 1
-   SetEnv no-brotli 1
-   <IfModule mod_headers.c>
-      Header set Content-Encoding br
-   </IfModule>
-</FilesMatch>
-
-# if there are same problems with ForceType, please try the AddType alternative
-# Set proper content type gzipped html
-<FilesMatch "\.gzip$">
-   ForceType text/html
-   # AddType "text/html" .gzip
-</FilesMatch>
-<FilesMatch "\.js\.gzip$">
-   ForceType text/javascript
-   # AddType "text/javascript" .gzip
-</FilesMatch>
-<FilesMatch "\.js\.gz$">
-   ForceType text/javascript
-   # AddType "text/javascript" .gzip
-</FilesMatch>
-<FilesMatch "\.css\.gzip$">
-   ForceType text/css
-   # AddType "text/css" .gzip
-</FilesMatch>
-<FilesMatch "\.css\.gz$">
-   ForceType text/css
-   # AddType "text/css" .gzip
-</FilesMatch>
-<FilesMatch "\.xml\.gzip$">
-   ForceType text/xml
-   # AddType "text/xml" .gzip
-</FilesMatch>
-<FilesMatch "\.rss\.gzip$">
-   ForceType text/xml
-   # AddType "text/xml" .gzip
-</FilesMatch>
-<FilesMatch "\.gz$">
-   ForceType text/html
-   # AddType "text/html" .gz
-</FilesMatch>
-<FilesMatch "\.js\.gz$">
-   ForceType text/javascript
-   # AddType "text/javascript" .gz
-</FilesMatch>
-<FilesMatch "\.css\.gz$">
-   ForceType text/css
-   # AddType "text/css" .gz
-</FilesMatch>
-<FilesMatch "\.xml\.gz$">
-   ForceType text/xml
-   # AddType "text/xml" .gz
-</FilesMatch>
-<FilesMatch "\.rss\.gz$">
-   ForceType text/xml
-   # AddType "text/xml" .gz
-</FilesMatch>
-<FilesMatch "\.br$">
-   ForceType text/html
-   # AddType "text/html" .br
-</FilesMatch>
-<FilesMatch "\.xml\.br$">
-   ForceType text/xml
-   # AddType "text/xml" .br
-</FilesMatch>
-<FilesMatch "\.rss\.br$">
-   ForceType text/xml
-   # AddType "text/xml" .br
-</FilesMatch>
-
-# Avoid .br files being delivered with Content-Language: br headers
-<IfModule mod_mime.c>
-   RemoveLanguage .br
-</IfModule>
-
-### End: StaticFileCache ###
+    ### End: StaticFileCache ###
 
 
-
-
-# If the file/symlink/directory does not exist => Redirect to index.php.
-# For httpd.conf, you need to prefix each '%{REQUEST_FILENAME}' with '%{DOCUMENT_ROOT}'.
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-l
-
-# Main URL rewriting.
-# For httpd.conf, use this line instead of the next one:
-# RewriteRule .* /TYPO3root/index.php [L]
-RewriteRule .* index.php [L]
+	# If the file/symlink/directory does not exist => Redirect to index.php.
+	# For httpd.conf, you need to prefix each '%{REQUEST_FILENAME}' with '%{DOCUMENT_ROOT}'.
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteRule ^.*$ %{ENV:CWD}index.php [QSA,L]
 
 </IfModule>
 
-### End: Settings for mod_rewrite ###
+# Access block for files
+# Apache < 2.3
+<IfModule !mod_authz_core.c>
+	<FilesMatch "(?i:^\.|^#.*#|^(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|^composer\.(?:json|lock)|^ext_conf_template\.txt|^ext_typoscript_constants\.txt|^ext_typoscript_setup\.txt|flexform[^.]*\.xml|locallang[^.]*\.(?:xml|xlf)|\.(?:bak|co?nf|cfg|ya?ml|ts|typoscript|tsconfig|dist|fla|in[ci]|log|sh|sql(?:\..*)?|sqlite(?:\..*)?|sw[op]|git.*|rc)|.*~)$">
+		Order allow,deny
+		Deny from all
+		Satisfy All
+	</FilesMatch>
+</IfModule>
+# Apache ≥ 2.3
+<IfModule mod_authz_core.c>
+	<If "%{REQUEST_URI} =~ m#(?i:/\.|/\x23.*\x23|/(?:ChangeLog|ToDo|Readme|License)(?:\.md|\.txt)?|/composer\.(?:json|lock)|/ext_conf_template\.txt|/ext_typoscript_constants\.txt|/ext_typoscript_setup\.txt|flexform[^.]*\.xml|locallang[^.]*\.(?:xml|xlf)|\.(?:bak|co?nf|cfg|ya?ml|ts|typoscript|tsconfig|dist|fla|in[ci]|log|sh|sql(?:\..*)?|sqlite(?:\..*)?|sw[op]|git.*|rc)|.*~)$#">
+		Require all denied
+	</If>
+</IfModule>
 
+# Block access to vcs directories
+<IfModule mod_alias.c>
+	RedirectMatch 404 /\.(?:git|svn|hg)/
+</IfModule>
 
-### Begin: PHP optimisation ###
-
-# If you do not change the following settings, the default values will be used.
-
-# TYPO3 works fine with register_globals turned off.
-# This is highly recommended, if your web server has it turned on.
-#php_flag register_globals off
-
-### End: PHP optimisation ###
+### End: Rewriting and Access ###
 
 
 
 ### Begin: Miscellaneous ###
 
+# 404 error prevention for non-existing redirected folders
+Options -MultiViews
+
 # Make sure that directory listings are disabled.
-Options -Indexes
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+
+<IfModule mod_headers.c>
+	# Force IE to render pages in the highest available mode
+	Header set X-UA-Compatible "IE=edge"
+	<FilesMatch "\.(appcache|avifs?|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff2?|xml|xpi)$">
+		Header unset X-UA-Compatible
+	</FilesMatch>
+
+	# Reducing MIME type security risks
+	Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ETag removal
+<IfModule mod_headers.c>
+	Header unset ETag
+</IfModule>
+FileETag None
 
 ### End: Miscellaneous ###
 

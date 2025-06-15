@@ -19,4 +19,4 @@ parameters:
         - '#^Variable \$_EXTKEY might not be defined\.$#'
         - '#^Variable \$llFrontend might not be defined\.$#'
         - '#^Variable \$llCore might not be defined\.$#'
-    phpVersion: 70200 # PHP 7.2
+    phpVersion: 70410 # PHP 7.4.1

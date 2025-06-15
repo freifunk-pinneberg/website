@@ -33,7 +33,7 @@
     "bin-dir": "bin",
     "web-dir": "web",
     "platform": {
-      "php": "7.2"
+      "php": "7.4.33"
     },
     "allow-plugins": {
       "typo3/class-alias-loader": true,
@@ -42,19 +42,20 @@
   },
   "minimum-stability": "beta",
   "require": {
-    "typo3/cms-core": "10.4.*",
-    "typo3/cms-base-distribution": "10.*",
-    "typo3/cms-recycler": "10.*",
-    "typo3/cms-filemetadata": "10.*",
-    "typo3/cms-workspaces": "10.*",
-    "typo3/cms-backend": "10.*",
-    "typo3/cms-beuser": "10.*",
-    "typo3/cms-redirects": "10.*",
-    "typo3/cms-linkvalidator": "10.*",
-    "typo3/cms-lowlevel": "10.*",
-    "typo3/cms-lang": "10.*",
-    "typo3/cms-seo": "10.*",
-    "typo3/cms-scheduler": "10.*",
+    "typo3/cms-composer-installers": "3.*",
+    "typo3/cms-core": "11.5.*",
+    "typo3/cms-base-distribution": "11.*",
+    "typo3/cms-recycler": "11.*",
+    "typo3/cms-filemetadata": "11.*",
+    "typo3/cms-workspaces": "11.*",
+    "typo3/cms-backend": "11.*",
+    "typo3/cms-beuser": "11.*",
+    "typo3/cms-redirects": "11.*",
+    "typo3/cms-linkvalidator": "11.*",
+    "typo3/cms-lowlevel": "11.*",
+    "typo3/cms-lang": "11.*",
+    "typo3/cms-seo": "11.*",
+    "typo3/cms-scheduler": "11.*",
     "ffpi/ffpi-theme": "dev-master",
     "ffpi/ffpi-helgo-theme": "dev-master",
     "ffpi/firmware-list": "dev-master",
@@ -65,14 +66,16 @@
     "ext-curl": "*",
     "ext-openssl": "*",
     "ext-json": "*",
-    "netresearch/rte-ckeditor-image": "^10.0",
-    "lochmueller/staticfilecache": "^11.1"
+    "netresearch/rte-ckeditor-image": "^11.0",
+    "lochmueller/staticfilecache": "^12.4"
   },
   "require-dev": {
-    "deployer/deployer": "6.4.*",
+    "deployer/deployer": "6.9.*",
     "rector/rector": "0.13.4",
+    "michielroos/typo3scan": "^1.7",
     "saschaegerer/phpstan-typo3": "*",
-    "phpstan/phpstan": "*"
+    "phpstan/phpstan": "*",
+    "helmich/typo3-typoscript-lint": "^2.5"
   },
   "extra": {
     "typo3/cms": {
