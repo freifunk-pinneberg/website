@@ -31,15 +31,14 @@
   "config": {
     "vendor-dir": "vendor",
     "bin-dir": "bin",
-    "web-dir": "web",
     "allow-plugins": {
-      "typo3/class-alias-loader": true,
-      "typo3/cms-composer-installers": true
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true
     }
   },
   "minimum-stability": "beta",
   "require": {
-    "typo3/cms-composer-installers": "3.*",
+    "typo3/cms-composer-installers": "*",
     "typo3/cms-core": "13.4.*",
     "typo3/cms-base-distribution": "13.4.*",
     "typo3/cms-recycler": "13.4.*",
@@ -53,27 +52,25 @@
     "typo3/cms-lang": "13.4.*",
     "typo3/cms-seo": "13.4.*",
     "typo3/cms-scheduler": "13.4.*",
-    "ffpi/ffpi-theme": "dev-master",
-    "ffpi/ffpi-helgo-theme": "dev-master",
+    "ffpi/ffpi-theme": "dev-feature/typo3v13",
+    "ffpi/ffpi-helgo-theme": "dev-feature/typo3-13",
     "ffpi/firmware-list": "dev-feature/typo3-13",
-    "ffpi/node-updates": "dev-master",
+    "ffpi/node-updates": "dev-feature/typo3-13",
     "ffpi/nodecounter": "dev-feature/typo3-13",
-    "friendsoftypo3/extension-builder": "*",
     "helhum/typo3-console": "*",
-    "netresearch/rte-ckeditor-image": "^11.0",
-    "lochmueller/staticfilecache": "^12.4"
+    "netresearch/rte-ckeditor-image": "*",
+    "lochmueller/staticfilecache": "*"
   },
   "require-dev": {
-    "deployer/deployer": "6.9.*",
-    "rector/rector": "0.13.4",
+    "deployer/deployer": "^8.0",
+    "ssch/typo3-rector": "^3.0",
     "michielroos/typo3scan": "^1.7",
-    "saschaegerer/phpstan-typo3": "*",
-    "phpstan/phpstan": "*",
-    "helmich/typo3-typoscript-lint": "^2.5"
+    "saschaegerer/phpstan-typo3": "^3.0",
+    "phpstan/phpstan": "^2.2",
+    "helmich/typo3-typoscript-lint": "^3.3"
   },
   "extra": {
     "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
       "web-dir": "web"
     }
   },

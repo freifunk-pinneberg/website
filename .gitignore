@@ -4,10 +4,10 @@
 /web/uploads/
 /web/typo3conf/l10n/
 /web/downloads/
-/web/download/
+/web/download
 
 #ignore extensions
-/web/typo3conf/ext/
+/vendor/
 
 # Ignore cache
 web/typo3conf/temp_CACHED*
@@ -20,6 +20,7 @@ web/typo3conf/AdditionalConfiguration.php
 web/typo3
 web/typo3_src
 web/typo3_src-*
+web/_assets
 /.htaccess
 web/index.php
 ENABLE_INSTALL_TOOL
@@ -27,6 +28,9 @@ ENABLE_INSTALL_TOOL
 # Ignore temp directory.
 /typo3temp/
 /web/typo3temp/
+
+#system specific files
+/config/system/additional.php
 
 #composer
 vendor

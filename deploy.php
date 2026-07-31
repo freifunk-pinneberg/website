@@ -23,14 +23,14 @@ add('shared_files', ['web/typo3conf/AdditionalConfiguration.php']);
 add('shared_dirs', ['var', 'fileadmin']);
 
 // Writable dirs by web server
-add('writable_dirs', ['var']);
+add('writable_dirs', ['var', 'fileadmin', 'web/typo3temp', 'web/uploads', 'web/typo3conf']);
 
 
 // Hosts
 
 host('pinneberg.freifunk.net')
     ->forwardAgent(true)
-    ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v4');
+    ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v5');
 
 // Tasks
 

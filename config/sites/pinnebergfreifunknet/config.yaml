@@ -1,14 +1,15 @@
 base: 'https://pinneberg.freifunk.net'
 baseVariants:
   -
-    base: '//pinneberg.freifunk.net.local'
+    base: //pinneberg.freifunk.net.local
     condition: 'applicationContext == "Development"'
   -
-    base: '//www.ffpi'
+    base: //www.ffpi
     condition: 'getenv("HTTP_HOST") == "www.ffpi"'
+disableStaticFileCache: false
 errorHandling:
   -
-    errorCode: '404'
+    errorCode: 404
     errorHandler: Page
     errorContentSource: 't3://page?uid=41'
 languages:
@@ -43,9 +44,9 @@ languages:
     enabled: true
     languageId: 2
     base: /no/
-    typo3Language: no
+    typo3Language: 'no'
     locale: nb_NO.UTF-8
-    iso-639-1: no
+    iso-639-1: 'no'
     navigationTitle: Norsk
     hreflang: nb-NO
     direction: ltr
@@ -59,7 +60,7 @@ languages:
     base: /dk/
     typo3Language: dk
     locale: dk_DK.UTF-8
-    iso-639-1: no
+    iso-639-1: 'no'
     navigationTitle: Dansk
     hreflang: nb-NO
     direction: ltr
@@ -96,7 +97,7 @@ routeEnhancers:
       .rss: 200
   NodeAbo:
     type: Extbase
-    extension: 'ffpi_node_updates'
+    extension: ffpi_node_updates
     plugin: Nodeabo
     routes:
       -
@@ -119,8 +120,9 @@ routes:
   -
     route: favicon.ico
     type: uri
-    source: '/typo3conf/ext/ffpi_theme/Resources/Public/favicon.ico'
+    source: 'EXT:ffpi_theme/Resources/Public/favicon.ico'
   -
     route: favicon.svg
     type: uri
-    source: '/typo3conf/ext/ffpi_theme/Resources/Public/favicon.svg'
+    source: 'EXT:ffpi_theme/Resources/Public/favicon.svg'
+websiteTitle: ''
