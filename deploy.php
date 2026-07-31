@@ -9,18 +9,15 @@ set('application', 'ffpi-webseite');
 
 // Project repository
 set('repository', 'git@github.com:freifunk-pinneberg/website.git');
-set('git_recursive', false);
-set('branch', 'master');
-
-// TYPO3 Path
-set('typo3_webroot', 'web');
+set('branch', 'feature/typo3-13');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
+set('keep_releases', 5);
 
 // Shared files/dirs between deploys
-add('shared_files', ['web/typo3conf/AdditionalConfiguration.php']);
-add('shared_dirs', ['var', 'fileadmin']);
+add('shared_files', ['config/system/additional.php']);
+#add('shared_dirs', ['var', 'fileadmin']);
 
 // Writable dirs by web server
 add('writable_dirs', ['var', 'fileadmin', 'web/typo3temp', 'web/uploads', 'web/typo3conf']);
@@ -29,7 +26,7 @@ add('writable_dirs', ['var', 'fileadmin', 'web/typo3temp', 'web/uploads', 'web/t
 // Hosts
 
 host('pinneberg.freifunk.net')
-    ->forwardAgent(true)
+    ->set('forward_agent', true)
     ->set('deploy_path', '/var/www/vhosts/pinneberg.freifunk.net_v5');
 
 // Tasks
@@ -42,7 +39,7 @@ task('create_symlinks', function () {
     run('cd {{release_path}}/web && ln -s /var/www/vhosts/piwik.pinneberg.freifunk.net/ piwik');
     run('cd {{release_path}}/web && ln -s /var/www/vhosts/stats.pinneberg.freifunk.net/ stats');
 });
-before('deploy:unlock', 'create_symlinks');
+before('deploy:shared', 'create_symlinks');
 
 //task('build', function () {
 //    run('cd {{release_path}} && build');
