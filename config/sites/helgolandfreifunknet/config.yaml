@@ -70,8 +70,8 @@ routes:
   -
     route: favicon.ico
     type: asset
-    source: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.ico'
+    asset: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.ico'
   -
     route: favicon.svg
     type: asset
-    source: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.svg'
+    asset: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.svg'
