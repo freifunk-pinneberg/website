@@ -754,7 +754,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_helgo_theme.git",
-                "reference": "6daf21c3bf90aeeb384cacc744efcaae89c5e448"
+                "reference": "046a286a7d4e49470b88dc203b98524a5ae3589d"
             },
             "require": {
                 "ffpi/ffpi-theme": "*",
@@ -795,7 +795,7 @@
             "support": {
                 "forum": "https://pinneberg.freifunk.net/forum/"
             },
-            "time": "2026-06-30T19:57:08+00:00"
+            "time": "2026-10-30T19:17:22+00:00"
         },
         {
             "name": "ffpi/ffpi-theme",
