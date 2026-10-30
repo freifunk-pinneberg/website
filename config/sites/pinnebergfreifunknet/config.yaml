@@ -119,10 +119,10 @@ routeEnhancers:
 routes:
   -
     route: favicon.ico
-    type: uri
+    type: asset
     source: 'EXT:ffpi_theme/Resources/Public/favicon.ico'
   -
     route: favicon.svg
-    type: uri
+    type: asset
     source: 'EXT:ffpi_theme/Resources/Public/favicon.svg'
 websiteTitle: ''

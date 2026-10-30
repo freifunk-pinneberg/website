@@ -69,9 +69,9 @@ routeEnhancers:
 routes:
   -
     route: favicon.ico
-    type: uri
-    source: '/typo3conf/ext/ffpi_helgo_theme/Resources/Public/favicon.ico'
+    type: asset
+    source: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.ico'
   -
     route: favicon.svg
-    type: uri
-    source: '/typo3conf/ext/ffpi_helgo_theme/Resources/Public/favicon.svg'
+    type: asset
+    source: 'EXT:ffpi_helgo_theme/Resources/Public/favicon.svg'
