@@ -902,7 +902,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:freifunk-pinneberg/typo3-tx_ffpi_node_updates.git",
-                "reference": "6c686a6fdddb46de3bef41f31de6be403857bc7a"
+                "reference": "cd1e4dc052fa2278be6274cb343a50e8de8315d8"
             },
             "require": {
                 "ext-curl": "*",
@@ -970,7 +970,7 @@
                     "url": "https://pinneberg.freifunk.net/mitmachen/spenden"
                 }
             ],
-            "time": "2026-10-30T19:02:40+00:00"
+            "time": "2026-11-18T19:28:18+00:00"
         },
         {
             "name": "ffpi/nodecounter",
