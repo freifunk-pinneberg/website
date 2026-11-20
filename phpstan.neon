@@ -2,16 +2,12 @@ includes:
     - vendor/saschaegerer/phpstan-typo3/extension.neon
 
 parameters:
-    level: 7
+    level: 2
     paths:
-        - web/typo3conf/ext/ffpi_firmware_list
-        - web/typo3conf/ext/ffpi_helgo_theme
-        - web/typo3conf/ext/ffpi_node_updates
-        - web/typo3conf/ext/ffpi_nodecounter
-        - web/typo3conf/ext/ffpi_theme
+        - vendor/ffpi
     excludePaths:
         analyseAndScan:
-            - web/typo3conf/ext/*/Tests/*
+            - vendor/ffpi/*/Tests/*
     fileExtensions:
         - php
     ignoreErrors:
@@ -19,4 +15,4 @@ parameters:
         - '#^Variable \$_EXTKEY might not be defined\.$#'
         - '#^Variable \$llFrontend might not be defined\.$#'
         - '#^Variable \$llCore might not be defined\.$#'
-    phpVersion: 70410 # PHP 7.4.1
+    phpVersion: 80210 # PHP 8.2.1

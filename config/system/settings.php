@@ -1,10 +1,15 @@
 <?php
+
+declare(strict_types=1);
+
+use TYPO3\CMS\Core\Log\Writer\FileWriter;
+use TYPO3\CMS\Core\Cache\Backend\Typo3DatabaseBackend;
+use TYPO3\CMS\Core\Cache\Frontend\VariableFrontend;
+
 return [
     'BE' => [
-        'debug' => false,
-        'explicitADmode' => 'explicitAllow',
+        'debug' => true,
         'installToolPassword' => '$pbkdf2-sha256$25000$UsYVa8/p6pf4fgnNM3unQg$xnNf5N.9wb2Npu9rwZqekkQgeOIk5/fS3Wh7jrxSwm8',
-        'loginSecurityLevel' => 'normal',
     ],
     'DB' => [
         'Connections' => [
@@ -35,10 +40,22 @@ return [
             'loginFootnote' => '',
             'loginHighlightColor' => '#dc0067',
             'loginLogo' => 'EXT:ffpi_theme/Resources/Public/Images/Logo.svg',
+            'loginLogoAlt' => '',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
+        ],
+        'redirects' => [
+            'showCheckIntegrityInfoInReports' => '1',
+            'showCheckIntegrityInfoInReportsSeconds' => '86400',
+        ],
+        'rte_ckeditor_image' => [
+            'enableAutomaticPreviewRenderer' => '1',
+            'enableAutomaticRteSoftref' => '1',
+            'excludedTables' => '',
+            'fetchExternalImages' => '1',
+            'includedTablesOnly' => '',
         ],
         'scheduler' => [
             'maxLifetime' => '1440',
@@ -49,39 +66,52 @@ return [
             'boostMode' => '0',
             'cacheTagsEnable' => '0',
             'clearCacheForAllDomains' => '1',
+            'cspGenerationOverride' => '0',
             'debugHeaders' => '0',
             'disableInDevelopment' => '0',
             'enableGeneratorBrotli' => '0',
             'enableGeneratorGzip' => '1',
             'enableGeneratorManifest' => '0',
+            'enableGeneratorPhp' => '0',
             'enableGeneratorPlain' => '0',
             'hashUriInCache' => '0',
+            'headerSizeBuffer' => '1.5',
             'htaccessTemplateName' => 'EXT:staticfilecache/Resources/Private/Templates/Htaccess.html',
+            'inlineAssetsFileSize' => '50000',
+            'inlineScriptMinify' => '0',
+            'inlineServiceFavIcon' => '0',
+            'inlineServiceScripts' => '0',
+            'inlineServiceStyles' => '0',
+            'inlineStyleAssets' => 'ico,png,woff2',
+            'inlineStyleMinify' => '0',
+            'largeIdentifierInCacheTable' => '0',
+            'maxHeaderSize' => '8192',
             'overrideCacheDirectory' => '',
+            'overrideClientUserAgent' => '',
+            'phpTemplateName' => 'EXT:staticfilecache/Resources/Private/Templates/Php.html',
             'rawurldecodeCacheFileName' => '0',
             'renameTablesToOtherPrefix' => '0',
             'sendCacheControlHeaderRedirectAfterCacheTimeout' => '0',
             'sendHttp2PushEnable' => '0',
             'sendHttp2PushFileExtensions' => 'css,js',
             'sendHttp2PushFileLimit' => '10',
+            'sendHttp2PushLimitToArea' => '',
             'useFallbackMiddleware' => '1',
             'useReverseUriLengthInPriority' => '1',
+            'validFallbackHeaders' => 'Content-Type,Content-Language,Content-Security-Policy,Link,X-SFC-Tags',
             'validHtaccessHeaders' => 'Content-Type,Content-Language,Link,X-SFC-Tags',
         ],
     ],
     'FE' => [
-        'debug' => false,
-        'loginSecurityLevel' => 'normal',
+        'debug' => true,
     ],
     'GFX' => [
+        'imagefile_ext' => 'gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp',
         'jpg_quality' => '80',
         'processor' => 'ImageMagick',
-        'processor_allowTemporaryMasksAsPng' => false,
-        'processor_colorspace' => 'sRGB',
         'processor_effects' => true,
         'processor_enabled' => true,
         'processor_path' => '/usr/bin/',
-        'processor_path_lzw' => '/usr/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -89,8 +119,8 @@ return [
                 'deprecations' => [
                     'writerConfiguration' => [
                         'notice' => [
-                            'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => true,
+                            FileWriter::class => [
+                                'disabled' => false,
                             ],
                         ],
                     ],
@@ -112,8 +142,8 @@ return [
         'caching' => [
             'cacheConfigurations' => [
                 'extbase_object' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                    'frontend' => 'TYPO3\\CMS\\Core\\Cache\\Frontend\\VariableFrontend',
+                    'backend' => Typo3DatabaseBackend::class,
+                    'frontend' => VariableFrontend::class,
                     'groups' => [
                         'system',
                     ],
@@ -122,27 +152,25 @@ return [
                     ],
                 ],
                 'hash' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => Typo3DatabaseBackend::class,
                 ],
                 'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => Typo3DatabaseBackend::class,
                 ],
                 'pages' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
-                ],
-                'pagesection' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => Typo3DatabaseBackend::class,
                 ],
                 'rootline' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => Typo3DatabaseBackend::class,
                 ],
             ],
         ],
-        'devIPmask' => '',
-        'displayErrors' => 0,
+        'devIPmask' => '*',
+        'displayErrors' => 1,
         'encryptionKey' => 'fba28922e8a061e471addf1a39863551c70cb3a3c38aae6357ffb2a2ea07a611fc90352c20ef59840930f6a5e1053df1',
-        'exceptionalErrors' => 4096,
+        'exceptionalErrors' => 12290,
         'features' => [
+            'security.frontend.reportContentSecurityPolicy' => true,
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Freifunk Pinneberg',
